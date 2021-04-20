@@ -1,0 +1,33 @@
+flying: true
+speed: 3
+health: 245
+engineOffset: 5.5
+range: 210
+armor: 3
+rotateShooting: false
+weapons: [
+  {
+    name: artilleryair
+    y: 0
+    x: 0
+    reload: 60
+    recoil: 2
+    ejectEffect: casing2
+    shootSound: artillery
+    rotate: true
+    mirror: false
+    bullet: {
+      speed: 2.45
+      damage: 5
+      width: 9
+      type: ArtilleryBulletType
+      height: 9
+      lifetime: 90
+      splashDamageRadius: 28
+      homingPower: 0.04
+      homingRange: 40
+      splashDamage: 38
+    }
+  }
+]
+research: hailreconstructor

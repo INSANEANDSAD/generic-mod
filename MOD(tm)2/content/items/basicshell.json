@@ -1,0 +1,6 @@
+type: resource
+color: 666600
+name: Basic Shell
+description: A basic shell used in earlier artilleries.
+explosiveness: 0.4
+flammability: 0.25

@@ -1,0 +1,33 @@
+type: GenericSmelter
+name: "Titanium Hardener"
+description: "Hardens Titanium"
+outputItem: {
+  item: hardenedtitanium
+  amount: 1
+}
+size: 2
+hasPower: true
+craftTime: 90
+updateEffect: smeltsmoke
+consumes: {
+ power: 3
+ liquid: {
+    liquid: oil
+    amount: 0.2
+ }
+ items: {
+    items: [
+      titanium/1
+      graphite/2
+    ]
+  }
+}
+requirements: [
+  lead/60
+  titanium/70
+  graphite/40
+  silicon/45
+]
+category: crafting
+research: melter
+idleSoundVolume: 0.5

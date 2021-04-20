@@ -1,0 +1,167 @@
+name: Downpour
+description: A powerful multi-barrel missile launcher (In reality it is just a big swarmer)
+health: 1800
+itemCapacity: 40
+size: 4
+reloadTime: 100
+range: 480
+inaccuracy: 5
+targetAir: true
+ammoPerShot: 1
+rotateSpeed: 5
+shootCone: 25
+recoilAmount: 3.6
+ammoTypes: {
+   graphite:  {  
+    "type": "MissileBulletType",
+    "lifetime": 200,
+    "speed": 2.5,
+    "splashDamageRadius": 22,
+    "splashDamage": 30,
+    "frontColor": "ffcc33",
+    "backColor": "ff7733",
+    "damage": 0
+    "incendAmount": 2
+    "statusDuration": 200
+    "bulletSprite": shell
+    "width": 9
+    "height": 9
+    "ammoMultiplier": 7
+    "hitEffect": flakExplosion
+    "reloadMultiplier": 0.9
+  }
+   plastanium:  {  
+    "type": "MissileBulletType",
+    "lifetime": 160,
+    "speed": 3.4,
+    "splashDamageRadius": 37,
+    "splashDamage": 48,
+    "frontColor": "d8d97f",
+    "backColor": "fffac6",
+    "damage": 0
+    "incendAmount": 2
+    "statusDuration": 200
+    "bulletSprite": shell
+    "width": 9
+    "height": 9
+    "ammoMultiplier": 12
+    "fragBullet": artilleryPlasticFrag
+    "fragBullets": 6
+    "hitEffect": plasticExplosion
+    "homingPower": 0.06
+    "homingRange": 45
+  }
+   silicon:  {  
+    "type": "MissileBulletType",
+    "lifetime": 135,
+    "speed": 3.9,
+    "splashDamageRadius": 28,
+    "splashDamage": 33,
+    "frontColor": "ffcc33",
+    "backColor": "ff7733",
+    "damage": 0
+    "incendAmount": 2
+    "statusDuration": 200
+    "bulletSprite": shell
+    "width": 9
+    "height": 9
+    "ammoMultiplier": 9
+    "hitEffect": flakExplosion
+    "homingPower": 0.09
+    "homingRange": 60
+    "reloadMultiplier": 1.4
+  }
+   blast-compound: {  
+    "type": "MissileBulletType",
+    "lifetime": 160,
+    "speed": 3.5,
+    "splashDamageRadius": 43,
+    "splashDamage": 61,
+    "frontColor": "ffd2ae",
+    "backColor": "e58956",
+    "damage": 0
+    "incendAmount": 2
+    "statusDuration": 200
+    "bulletSprite": shell
+    "width": 11
+    "height": 11
+    "ammoMultiplier": 11
+    "hitEffect": blastExplosion
+    "reloadMultiplier": 0.9
+    "homingPower": 0.06
+    "homingRange": 45
+  }
+   AP:  {  
+    "type": "MissileBulletType",
+    "lifetime": 100,
+    "speed": 4.9,
+    "splashDamageRadius": 20,
+    "splashDamage": 31,
+    "frontColor": "ffcc33",
+    "backColor": "ff7733",
+    "damage": 71
+    "incendAmount": 2
+    "statusDuration": 200
+    "bulletSprite": shell
+    "width": 9
+    "height": 9
+    "ammoMultiplier": 9
+    "hitEffect": flakExplosion
+    "homingPower": 0.09
+    "homingRange": 60
+    "reloadMultiplier": 1
+  }
+   HE: {  
+    "type": "MissileBulletType",
+    "lifetime": 130,
+    "speed": 4,
+    "splashDamageRadius": 46,
+    "splashDamage": 70,
+    "frontColor": "ffd2ae",
+    "backColor": "e58956",
+    "damage": 0
+    "incendAmount": 2
+    "statusDuration": 200
+    "bulletSprite": shell
+    "width": 11
+    "height": 11
+    "ammoMultiplier": 14
+    "hitEffect": blastExplosion
+    "reloadMultiplier": 1.15
+    "homingPower": 0.05
+    "homingRange": 60
+  }
+  surge-alloy:  {  
+    "type": "MissileBulletType",
+    "lifetime": 135,
+    "speed": 3.9,
+    "splashDamageRadius": 39,
+    "splashDamage": 60,
+    "frontColor": "ffff33",
+    "backColor": "ff9933",
+    "damage": 0
+    "incendAmount": 2
+    "statusDuration": 200
+    "bulletSprite": shell
+    "width": 9
+    "height": 9
+    "lightning": 3
+    "lightningLength": 13
+    "lightningDamage": 16
+    "ammoMultiplier": 9
+    "hitEffect": flakExplosion
+    "homingPower": 0.09
+    "homingRange": 50
+    "reloadMultiplier": 1.15
+  }
+}
+requirements: [
+  silicon/100
+  metaglass/60
+  plastanium/140
+  hardenedtitanium/120
+  thorium/110
+  surge-alloy/150
+]
+category: turret
+research: storm
