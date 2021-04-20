@@ -1,4 +1,4 @@
-name: Storm
+localizedName: Storm
 description: A rapid-fire multi-shot turret.
 health: 200
 itemCapacity: 20

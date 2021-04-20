@@ -4,6 +4,7 @@ health: 245
 engineOffset: 5.5
 range: 210
 armor: 3
+localizedName: Hail with wings
 rotateShooting: false
 weapons: [
   {

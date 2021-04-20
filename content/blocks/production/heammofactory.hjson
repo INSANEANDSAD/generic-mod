@@ -1,5 +1,5 @@
 type: GenericSmelter
-name: "HE ammunition constructor"
+localizedName: "HE ammunition constructor"
 description: "Constructs explosive ammunition"
 outputItem: {
   item: HE

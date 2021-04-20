@@ -1,5 +1,5 @@
 type: reconstructor
-name: Hail Reconstructor
+localizedName: T2.5 Reconstructor
 health: 500
 size: 3
 itemCapacity: 20

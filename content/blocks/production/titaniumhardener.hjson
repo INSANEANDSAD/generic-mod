@@ -1,5 +1,5 @@
 type: GenericSmelter
-name: "Titanium Hardener"
+localizedName: "Titanium Hardener"
 description: "Hardens Titanium"
 outputItem: {
   item: hardenedtitanium
