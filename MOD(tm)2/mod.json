@@ -1,7 +1,0 @@
-name: name
-displayName: Mod Name
-author: You
-description: This is a description.
-version: "1.0"
-minGameVersion: "125.1"
-dependencies: [ ]

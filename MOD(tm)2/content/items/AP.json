@@ -1,6 +1,0 @@
-type: resource
-color: 666600
-name: AP ammunition
-description: Generic Armour-piercing ammunition.
-explosiveness: 0.4
-flammability: 0.25
