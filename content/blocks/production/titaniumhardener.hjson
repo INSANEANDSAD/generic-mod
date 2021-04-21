@@ -18,7 +18,7 @@ consumes: {
  items: {
     items: [
       titanium/1
-      graphite/2
+      graphite/3
     ]
   }
 }

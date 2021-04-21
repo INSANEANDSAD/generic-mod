@@ -20,7 +20,7 @@ consumes: {
         items: [
             {
                 item: silicon
-                amount: 30
+                amount: 60
             },
             {
                 item: graphite
@@ -28,7 +28,7 @@ consumes: {
             },
             {
                 item: hardenedtitanium
-                amount: 15
+                amount: 25
             }
         ]
     }
