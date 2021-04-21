@@ -8,14 +8,14 @@ engineSize: 2
 range: 260
 armor: 4
 localizedName: Onager
-description: "Equipped with two hail-style cannons, and a larger cannon. "
+description: "Equipped with two hail-style cannons, and an oversized central cannon. "
 rotateShooting: false
 commandLimit: 9
 "weapons": [
   {
      name: artilleryair
-    y: 6
-    x: 2
+    y: 5
+    x: 4
     reload: 60
     recoil: 2
     ejectEffect: casing2
@@ -37,7 +37,7 @@ commandLimit: 9
     },
       {
      name: artilleryairbig
-    y: 0
+    y: -2.5
     x: 0
     reload: 85
     recoil: 2
