@@ -13,7 +13,7 @@ rotateShooting: false
 commandLimit: 9
 "weapons": [
   {
-     name: artilleryair
+     name: airartillery
     y: 3
     x: 0
     reload: 60
@@ -48,10 +48,13 @@ commandLimit: 9
     bullet: {
       speed: 2.2
       damage: 2
-      width: 11
+      width: 17
+      backColor: ff7777
+      frontColor: ffaaaa
       type: ArtilleryBulletType
-      height: 11
+      height: 17
       lifetime: 135
+      hitEffect: blastExplosion
       splashDamageRadius: 40
       splashDamage: 65
     }
