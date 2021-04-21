@@ -39,22 +39,22 @@ commandLimit: 9
      name: airartillerybig
     y: 0
     x: 0
-    reload: 80
+    reload: 85
     recoil: 2
     ejectEffect: casing2
     shootSound: artillery
     rotate: true
     mirror: false
     bullet: {
-      speed: 2.45
+      speed: 2.2
       damage: 2
       width: 11
       type: ArtilleryBulletType
       height: 11
-      lifetime: 108
-      splashDamageRadius: 36
-      splashDamage: 55
+      lifetime: 135
+      splashDamageRadius: 40
+      splashDamage: 65
     }
     },
 ]
-research: t3.5reconstructor
+research: 3.5reconstructor
