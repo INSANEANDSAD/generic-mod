@@ -14,8 +14,8 @@ commandLimit: 9
 "weapons": [
   {
      name: artilleryair
-    y: 3
-    x: 0
+    y: 6
+    x: 2
     reload: 60
     recoil: 2
     ejectEffect: casing2
