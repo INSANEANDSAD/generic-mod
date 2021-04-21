@@ -1,0 +1,60 @@
+flying: true
+speed: 2.4
+accel: 0.8
+drag: 0.01
+health: 650
+engineOffset: 12
+engineSize: 2
+range: 260
+armor: 4
+localizedName: Onager
+description: "Equipped with two hail-style cannons, and a larger cannon. "
+rotateShooting: false
+commandLimit: 9
+"weapons": [
+  {
+     name: artilleryair
+    y: 3
+    x: 0
+    reload: 60
+    recoil: 2
+    ejectEffect: casing2
+    shootSound: artillery
+    rotate: true
+    mirror: true
+    bullet: {
+      speed: 2.45
+      damage: 5
+      width: 9
+      type: ArtilleryBulletType
+      height: 9
+      lifetime: 90
+      splashDamageRadius: 28
+      homingPower: 0.04
+      homingRange: 40
+      splashDamage: 38
+    }
+    },
+      {
+     name: airartillerybig
+    y: 0
+    x: 0
+    reload: 80
+    recoil: 2
+    ejectEffect: casing2
+    shootSound: artillery
+    rotate: true
+    mirror: false
+    bullet: {
+      speed: 2.45
+      damage: 2
+      width: 11
+      type: ArtilleryBulletType
+      height: 11
+      lifetime: 108
+      splashDamageRadius: 36
+      splashDamage: 55
+    }
+    },
+]
+research: t3.5reconstructor
