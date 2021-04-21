@@ -1,0 +1,39 @@
+type: reconstructor
+localizedName: T3.5 Reconstructor
+health: 500
+size: 5
+itemCapacity: 125
+constructTime: 1000
+
+requirements: [
+    silicon/200
+    graphite/240
+    titanium/80
+]
+
+upgrades: [
+    [wingedhail, onager]
+]
+
+consumes: {
+    items: {
+        items: [
+            {
+                item: silicon
+                amount: 30
+            },
+            {
+                item: graphite
+                amount: 40
+            },
+            {
+                item: hardenedtitanium
+                amount: 15
+            }
+        ]
+    }
+    power: 4
+}
+
+category: units
+research: hailreconstructor
