@@ -4,7 +4,7 @@ description: Shoots orbs of energy
 health: 1400
 size: 2
 reloadTime: 50
-range: 530
+range: 295
 inaccuracy: 1
 rotateSpeed: 1
 targetAir: true
