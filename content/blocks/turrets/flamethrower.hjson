@@ -1,5 +1,5 @@
 localizedName: Flamethrower
-description: A big Scorch. Does massive damage at medium range.
+description: A big Scorch. Does massive damage at medium range. Needs some serious "balancing"
 health: 1000
 itemCapacity: 20
 size: 3
@@ -12,7 +12,7 @@ targetAir: true
 rotateSpeed: 5
 shootCone: 15
 recoilAmount: 0.5
-ammoTypes: {}
+coolantMultiplier: 0.8
 requirements: [
   phase-fabric/110
   hardenedtitanium/120
