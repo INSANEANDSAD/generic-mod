@@ -3,21 +3,21 @@ description: A big Scorch. Does massive damage at medium range.
 health: 1000
 itemCapacity: 20
 size: 3
-reloadTime: 6
+reloadTime: 8
 range: 184
-xRand: 2
+xRand: 1
 inaccuracy: 3
-shots: 7
+shots: 6
 targetAir: true
 rotateSpeed: 5
 shootCone: 15
 recoilAmount: 0.5
 ammoTypes: {}
 requirements: [
-  phase-fabric/60
+  phase-fabric/110
   hardenedtitanium/120
   silicon/200
-  plastanium/60
+  surge-alloy/60
 ]
 category: turret
 research: scorch
