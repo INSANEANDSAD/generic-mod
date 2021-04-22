@@ -14,7 +14,7 @@ shootCone: 15
 recoilAmount: 0.5
 coolantMultiplier: 6
 requirements: [
-  phase-fabric/110
+  blast-compound/110
   hardenedtitanium/120
   silicon/200
   surge-alloy/60
