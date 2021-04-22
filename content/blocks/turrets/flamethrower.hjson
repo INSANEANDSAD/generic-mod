@@ -3,7 +3,7 @@ description: A big Scorch. Does massive damage at medium range. Needs some serio
 health: 1000
 itemCapacity: 20
 size: 3
-reloadTime: 8
+reloadTime: 9
 range: 184
 xRand: 1
 inaccuracy: 3
@@ -12,7 +12,7 @@ targetAir: true
 rotateSpeed: 5
 shootCone: 15
 recoilAmount: 0.5
-coolantMultiplier: 0.8
+coolantMultiplier: 6
 requirements: [
   phase-fabric/110
   hardenedtitanium/120

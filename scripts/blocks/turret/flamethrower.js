@@ -10,17 +10,17 @@ const flamethrower = extendContent(ItemTurret, "flamethrower", {
 	  }
 });
 
-const pyraShoot = new Effect(34, e => {
+const pyraShoot = new Effect(32, e => {
 	Draw.color(Pal.lightPyraFlame, Pal.darkPyraFlame, Color.gray, e.fin());
     Angles.randLenVectors(e.id, 30, e.finpow() * 190, e.rotation, 6, new Floatc2(){get: (x, y) => {
         Fill.circle(e.x + x, e.y + y, 1.2 + e.fout() * 2.4);
     }});
 });
 
-const blastShoot = new Effect(37, e => {
+const blastShoot = new Effect(36, e => {
 	Draw.color(Pal.missileYellow, Pal.missileYellowBack, Color.gray, e.fin());
     Angles.randLenVectors(e.id, 33, e.finpow() * 190, e.rotation, 6, new Floatc2(){get: (x, y) => {
-        Fill.circle(e.x + x, e.y + y, 1.55 + e.fout() * 2.5);
+        Fill.circle(e.x + x, e.y + y, 1.6 + e.fout() * 2.6);
     }});
 });
 
