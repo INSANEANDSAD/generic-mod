@@ -1,10 +1,10 @@
 localizedName: Storm
 description: A rapid-fire multi-shot turret.
-health: 200
+health: 1125
 itemCapacity: 20
 size: 3
-reloadTime: 30
-range: 280
+reloadTime: 40
+range: 250
 inaccuracy: 4
 shots: 1
 targetAir: true
@@ -40,15 +40,15 @@ ammoTypes: {
     "width": 8
     "height": 16
     "ammoMultiplier": 7
-    "incendAmount": 5
+    "incendAmount": 6
     "hitEffect": flakExplosion
   }
    blast-compound: {  
     "type": "BasicBulletType",
     "lifetime": 45,
     "speed": 9,
-    "splashDamageRadius": 20,
-    "splashDamage": 22,
+    "splashDamageRadius": 18,
+    "splashDamage": 19,
     "frontColor": "ffcc33",
     "backColor": "ff7733",
     "damage": 0
@@ -66,7 +66,7 @@ ammoTypes: {
     "speed": 9,
     "frontColor": "ffcc33",
     "backColor": "ff7733",
-    "damage": 14
+    "damage": 16
     "statusDuration": 400
     "bulletSprite": shell
     "width": 11
@@ -83,7 +83,7 @@ ammoTypes: {
     "speed": 8,
     "frontColor": "ffff00",
     "backColor": "77ff00",
-    "damage": 26
+    "damage": 27
     "bulletSprite": shell
     "width": 8
     "height": 16
