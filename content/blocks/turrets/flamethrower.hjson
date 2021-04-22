@@ -1,5 +1,6 @@
 localizedName: Flamethrower
 description: A big Scorch. Does massive damage at medium range. Needs some serious "balancing"
+details: Yes, it requires pyratite and blast compound to build. Don't ask why...
 health: 1000
 itemCapacity: 20
 size: 3
@@ -14,10 +15,11 @@ shootCone: 15
 recoilAmount: 0.5
 coolantMultiplier: 6
 requirements: [
-  blast-compound/110
+  blast-compound/80
   hardenedtitanium/120
   silicon/200
-  surge-alloy/60
+  thorium/80
+  pyratite/110
 ]
 category: turret
 research: scorch
