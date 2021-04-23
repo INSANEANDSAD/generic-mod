@@ -1,24 +1,24 @@
 type: GenericSmelter
-localizedName: "Plastanium Furnace"
-description: "Uses blast compound to produce more plastanium with less resources."
+localizedName: "Plastanium Arc Furnace"
+description: "Faster Plastanium production. Needs large amounts of cryofluid as coolant"
 outputItem: {
   item: plastanium
   amount: 6
 }
 size: 3
 hasPower: true
-craftTime: 120
+craftTime: 60
 updateEffect: smeltsmoke
 consumes: {
- power: 8
+ power: 9
  liquid: {
-    liquid: oil
-    amount: 0.8
+    liquid: cryofluid
+    amount: 0.4
  }
  items: {
     items: [
       titanium/10
-      blast-compound/1
+      spore-pod/3
     ]
   }
 }
