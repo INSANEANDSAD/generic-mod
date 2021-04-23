@@ -1,0 +1,33 @@
+type: GenericSmelter
+localizedName: "Plastanium Furnace"
+description: "Uses blast compound to produce more plastanium with less resources."
+outputItem: {
+  item: plastanium
+  amount: 6
+}
+size: 3
+hasPower: true
+craftTime: 120
+updateEffect: smeltsmoke
+consumes: {
+ power: 8
+ liquid: {
+    liquid: oil
+    amount: 0.8
+ }
+ items: {
+    items: [
+      titanium/10
+      blast-compound/1
+    ]
+  }
+}
+requirements: [
+  hardenedtitanium/70
+  plastanium/120
+  phase-fabric/50
+  thorium/45
+]
+category: crafting
+research: plastanium-compressor
+idleSoundVolume: 0.5
