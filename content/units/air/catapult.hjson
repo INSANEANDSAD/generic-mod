@@ -1,0 +1,15 @@
+flying: true
+speed: 2.4
+accel: 0.8
+drag: 0.01
+health: 6500
+engineOffset: 20
+engineSize: 5
+range: 425
+armor: 9
+localizedName: Catapult
+description: "A powerful unit equipped with flamethrowers and a compact and powerful cannon"
+rotateShooting: false
+commandLimit: 9
+lowAltitude: true
+research: 3.5reconstructor
