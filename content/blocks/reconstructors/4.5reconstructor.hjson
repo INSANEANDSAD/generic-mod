@@ -1,0 +1,51 @@
+type: reconstructor
+localizedName: Renovator
+health: 500
+size: 7
+itemCapacity: 125
+constructTime: 1000
+
+requirements: [
+    silicon/450
+    graphite/520
+    hardenedtitanium/550
+    surge-alloy/260
+    thorium/450
+    metaglass/300
+]
+
+upgrades: [
+    [wingedhail, onager]
+]
+
+consumes: {
+    
+    items: {
+        items: [
+            {
+                item: surge-alloy
+                amount: 350
+            },
+            {
+                item: silicon
+                amount: 400
+            },
+            {
+                item: thorium
+                amount: 500
+            },
+            {
+                item: hardenedtitanium
+                amount: 250
+            }
+        ]
+    }
+    power: 14
+    liquid: {
+     liquid: cryofluid
+     amount: 1
+    }
+}
+
+category: units
+research: 3.5reconstructor

@@ -1,6 +1,6 @@
 const pyraShoot = new Effect(32, e => {
 	Draw.color(Pal.lightPyraFlame, Pal.darkPyraFlame, Color.gray, e.fin());
-    Angles.randLenVectors(e.id, 24, e.finpow() * 144, e.rotation, 6, new Floatc2(){get: (x, y) => {
+    Angles.randLenVectors(e.id, 24, e.finpow() * 120, e.rotation, 6, new Floatc2(){get: (x, y) => {
         Fill.circle(e.x + x, e.y + y, 1.2 + e.fout() * 2.4);
     }});
 });
@@ -8,7 +8,7 @@ const pyraShoot = new Effect(32, e => {
 const flamePyra=extend(BulletType,{});
 flamePyra.damage=35;
 flamePyra.hitSize=7;
-flamePyra.lifetime=24;
+flamePyra.lifetime=20;
 flamePyra.length=12;
 flamePyra.width=6;
 flamePyra.speed=6;
@@ -25,8 +25,8 @@ flamePyra.ammoMultiplier=15;
 const artilleryFrag=extend(ArtilleryBulletType,{});
 artilleryFrag.lifetime=60;
 artilleryFrag.speed=1.2;
-artilleryFrag.splashDamage=65;
-artilleryFrag.splashDamageRadius=40;
+artilleryFrag.splashDamage=58;
+artilleryFrag.splashDamageRadius=36;
 artilleryFrag.hitEffect=Fx.blastExplosion;
 artilleryFrag.width=14;
 artilleryFrag.height=14;

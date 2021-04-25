@@ -1,5 +1,6 @@
 type: reconstructor
-localizedName: T3.5 Reconstructor
+description: A larger reconstructor
+localizedName: Large Reconstructor
 health: 500
 size: 5
 itemCapacity: 125
