@@ -12,4 +12,5 @@ description: "A powerful unit equipped with flamethrowers and a compact and powe
 rotateShooting: false
 commandLimit: 9
 lowAltitude: true
-research: 3.5reconstructor
+research: 4.5reconstructor
+hitSize: 30

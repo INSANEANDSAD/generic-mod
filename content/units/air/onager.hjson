@@ -11,6 +11,7 @@ localizedName: Onager
 description: "Equipped with two hail-style cannons, and an oversized central cannon. "
 rotateShooting: false
 commandLimit: 9
+hitSize: 20
 "weapons": [
   {
      name: artilleryair

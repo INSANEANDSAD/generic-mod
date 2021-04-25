@@ -4,8 +4,9 @@ health: 245
 engineOffset: 5.5
 range: 210
 armor: 3
-localizedName: Flying Hail
+localizedName: Ballista
 rotateShooting: false
+hitSize: 10
 weapons: [
   {
     name: artilleryair
