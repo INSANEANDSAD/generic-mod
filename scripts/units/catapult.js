@@ -1,14 +1,14 @@
 const pyraShoot = new Effect(32, e => {
 	Draw.color(Pal.lightPyraFlame, Pal.darkPyraFlame, Color.gray, e.fin());
-    Angles.randLenVectors(e.id, 24, e.finpow() * 120, e.rotation, 6, new Floatc2(){get: (x, y) => {
+    Angles.randLenVectors(e.id, 24, e.finpow() * 220, e.rotation, 6, new Floatc2(){get: (x, y) => {
         Fill.circle(e.x + x, e.y + y, 1.2 + e.fout() * 2.4);
     }});
 });
 
 const flamePyra=extend(BulletType,{});
-flamePyra.damage=35;
+flamePyra.damage=45;
 flamePyra.hitSize=7;
-flamePyra.lifetime=20;
+flamePyra.lifetime=36;
 flamePyra.length=12;
 flamePyra.width=6;
 flamePyra.speed=6;
@@ -25,8 +25,8 @@ flamePyra.ammoMultiplier=15;
 const artilleryFrag=extend(ArtilleryBulletType,{});
 artilleryFrag.lifetime=60;
 artilleryFrag.speed=1.2;
-artilleryFrag.splashDamage=58;
-artilleryFrag.splashDamageRadius=36;
+artilleryFrag.splashDamage=62;
+artilleryFrag.splashDamageRadius=40;
 artilleryFrag.hitEffect=Fx.blastExplosion;
 artilleryFrag.width=14;
 artilleryFrag.height=14;
@@ -37,22 +37,22 @@ artilleryFrag.frontColor=Pal.missileYellow;
 const flameArtillery=extend(ArtilleryBulletType,{});
 flameArtillery.lifetime=170;
 flameArtillery.speed=2.5;
-flameArtillery.splashDamage=90;
-flameArtillery.splashDamageRadius=90;
+flameArtillery.splashDamage=120;
+flameArtillery.splashDamageRadius=80;
 flameArtillery.hitEffect=Fx.massiveExplosion;
 flameArtillery.width=27;
 flameArtillery.height=27;
 flameArtillery.backColor=Color.valueOf("ff7568");
 flameArtillery.frontColor=Color.valueOf("ff7987");
 flameArtillery.fragBullet=artilleryFrag;
-flameArtillery.fragBullets=8;
+flameArtillery.fragBullets=10;
 
 
 
 const catapultFlam = extendContent(Weapon, "name-flamethrowerair", {});
 catapultFlam.x=4;
 catapultFlam.y=12;
-catapultFlam.reload=6;
+catapultFlam.reload=5;
 catapultFlam.rotate=true;
 catapultFlam.alternate=false;
 catapultFlam.recoil=1;
@@ -63,7 +63,7 @@ catapultFlam.shootSound=Sounds.flame;
 const catapultFlamB = extendContent(Weapon, "name-flamethrowerair", {});
 catapultFlamB.x=8;
 catapultFlamB.y=-12;
-catapultFlamB.reload=6;
+catapultFlamB.reload=5;
 catapultFlamB.rotate=true;
 catapultFlamB.alternate=false;
 catapultFlamB.recoil=1;
