@@ -15,7 +15,7 @@ requirements: [
 ]
 
 upgrades: [
-    [wingedhail, onager]
+    [onager, catapult]
 ]
 
 consumes: {
