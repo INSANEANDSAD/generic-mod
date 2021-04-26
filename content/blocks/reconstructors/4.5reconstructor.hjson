@@ -3,7 +3,7 @@ localizedName: Renovator
 health: 500
 size: 7
 itemCapacity: 125
-constructTime: 1000
+constructTime: 2000
 
 requirements: [
     silicon/450

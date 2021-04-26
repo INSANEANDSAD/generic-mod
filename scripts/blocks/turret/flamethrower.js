@@ -25,7 +25,7 @@ const blastShoot = new Effect(36, e => {
 });
 
 const flamePyra=extend(BulletType,{});
-flamePyra.damage=55;
+flamePyra.damage=60;
 flamePyra.hitSize=7;
 flamePyra.lifetime=32;
 flamePyra.length=12;
@@ -42,7 +42,7 @@ flamePyra.status=StatusEffects.burning;
 flamePyra.hittable=false;
 
 const flameExplosive=extend(BulletType,{});
-flameExplosive.damage=70;
+flameExplosive.damage=75;
 flameExplosive.hitSize=7;
 flameExplosive.lifetime=32;
 flameExplosive.length=12;
@@ -59,7 +59,7 @@ flameExplosive.status=StatusEffects.burning;
 flameExplosive.hittable=false;
 
 const flameSurge=extend(BulletType,{});
-flameSurge.damage=75;
+flameSurge.damage=90;
 flameSurge.lightning=2;
 flameSurge.lightningDamage=24;
 flameSurge.lightningLength=8;
