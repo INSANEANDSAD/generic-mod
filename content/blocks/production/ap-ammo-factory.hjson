@@ -1,6 +1,7 @@
 type: GenericSmelter
-localizedName: AP factory
+localizedName: AP ammunition factory
 description: Constructs armour-piercing ammunition
+details: 'murica!
 outputItem: {
   item: AP
   amount: 1

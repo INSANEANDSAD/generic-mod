@@ -1,10 +1,11 @@
 type: GenericSmelter
-localizedName: "HE ammunition constructor"
+localizedName: "HE ammunition factory"
 description: "Constructs explosive ammunition"
 outputItem: {
   item: HE
   amount: 1
 }
+details: 'murica!
 size: 2
 hasPower: true
 craftTime: 120
