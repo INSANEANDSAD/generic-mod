@@ -17,7 +17,7 @@ consumes: {
  }
  items: {
     items: [
-      titanium/10
+      titanium/9
       spore-pod/3
     ]
   }

@@ -8,7 +8,7 @@ engineSize: 2
 range: 260
 armor: 4
 localizedName: Onager
-description: "Equipped with two hail-style cannons, and an oversized central cannon. "
+description: "Equipped with two cannons, and an oversized central cannon. "
 rotateShooting: false
 commandLimit: 9
 hitSize: 20
@@ -61,4 +61,4 @@ hitSize: 20
     }
     },
 ]
-research: 3.5reconstructor
+research: 3.5-reconstructor

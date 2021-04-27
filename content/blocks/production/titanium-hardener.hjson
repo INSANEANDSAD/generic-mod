@@ -13,7 +13,7 @@ consumes: {
  power: 3
  liquid: {
     liquid: oil
-    amount: 0.2
+    amount: 0.15
  }
  items: {
     items: [

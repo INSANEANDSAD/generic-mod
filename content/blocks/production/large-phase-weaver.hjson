@@ -1,0 +1,31 @@
+type: GenericSmelter
+localizedName: "Large Phase Weaver"
+description: "A larger and more powerful phase weaver"
+outputItem: {
+  item: phase-fabric
+  amount: 3
+}
+size: 3
+hasPower: true
+craftTime: 60
+itemCapacity: 30
+updateEffect: smeltsmoke
+consumes: {
+ power: 7
+ items: {
+    items: [
+      thorium/8
+      sand/20
+    ]
+  }
+}
+requirements: [
+  hardenedtitanium/70
+  plastanium/120
+  phase-fabric/50
+  thorium/45
+]
+drawer: drawWeave
+category: crafting
+research: phase-weaver
+idleSoundVolume: 0.5
