@@ -1,0 +1,50 @@
+flying: true
+speed: 2
+accel: 0.2
+drag: 0.05
+health: 850
+engineOffset: 5.5
+range: 20
+armor: 0
+rotateShooting: false
+commandLimit: 16
+weapons: [
+   {
+     name: 
+    y: 0
+    x: 0
+    reload: 100
+    recoil: 2
+    shootCone: 180
+    rotate: true
+    ejectEffect: casing2
+    shootSound: explosion
+    bullet: {
+      type: BasicBulletType
+      killShooter: true
+      splashDamage: 120
+      splashDamageRadius: 50
+      shootEffect: shootSmall
+      smokeEffect: shootSmallSmoke
+      hitEffect: flakExplosion
+      frontColor: f8ad42
+      backColor: f68021
+      width: 14f
+      height: 18f
+      status: blasted
+      fragBullets: 10
+      fragBullet: standardDense
+      shootEffect: shootSmall
+      smokeEffect: shootSmallSmoke
+      incendAmount: 1
+      incendSpread: 2
+      frontColor: f8ad42
+      backColor: f68021
+      status: burning
+    }
+  }
+]
+defaultController: SuicideAI
+crashDamageMultiplier: 8
+targetFlag: power
+research: hail-reconstructor
