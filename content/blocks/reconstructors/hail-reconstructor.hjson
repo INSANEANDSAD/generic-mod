@@ -13,7 +13,8 @@ requirements: [
 ]
 
 upgrades: [
-    [flare, wingedhail]
+    [flare, wingedhail],
+    [crawler, shard]
 ]
 
 consumes: {
