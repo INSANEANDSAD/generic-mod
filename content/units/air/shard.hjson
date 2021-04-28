@@ -2,9 +2,10 @@ flying: true
 speed: 2
 accel: 0.2
 drag: 0.05
+hitSize: 10
 health: 850
 engineOffset: 5.5
-range: 20
+range: 25
 armor: 0
 rotateShooting: false
 commandLimit: 16
@@ -20,8 +21,9 @@ weapons: [
     ejectEffect: casing2
     shootSound: explosion
     bullet: {
-      type: BasicBulletType
+      type: BombBulletType
       killShooter: true
+      lifetime: 1
       splashDamage: 120
       splashDamageRadius: 50
       shootEffect: shootSmall
@@ -44,7 +46,7 @@ weapons: [
     }
   }
 ]
-defaultController: SuicideAI
+defaultController: SuicideAI::new
 crashDamageMultiplier: 8
 targetFlag: power
 research: hail-reconstructor
