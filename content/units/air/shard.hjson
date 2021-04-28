@@ -3,27 +3,33 @@ speed: 2
 accel: 0.2
 drag: 0.05
 hitSize: 10
-health: 850
+health: 650
 engineOffset: 5.5
-range: 25
+range: 28
 armor: 0
 rotateShooting: false
 commandLimit: 16
 weapons: [
    {
-     name: 
+    ignoreRotation: true
     y: 0
     x: 0
-    reload: 100
+    shootY: 0
+    reload: 30
     recoil: 2
     shootCone: 180
     rotate: true
     ejectEffect: casing2
     shootSound: explosion
+    maxRange: 40
+    mirror: false
     bullet: {
-      type: BombBulletType
+      type: BasicBulletType
       killShooter: true
-      lifetime: 1
+      lifetime: 2
+      speed: 14
+      collidesAir: true
+      collidesGround: true
       splashDamage: 120
       splashDamageRadius: 50
       shootEffect: shootSmall
@@ -31,9 +37,9 @@ weapons: [
       hitEffect: flakExplosion
       frontColor: f8ad42
       backColor: f68021
-      width: 14f
-      height: 18f
       status: blasted
+      width: 1
+      height: 1
       fragBullets: 10
       fragBullet: standardDense
       shootEffect: shootSmall
@@ -46,7 +52,6 @@ weapons: [
     }
   }
 ]
-defaultController: SuicideAI::new
 crashDamageMultiplier: 8
-targetFlag: power
+targetFlag: battery
 research: hail-reconstructor
