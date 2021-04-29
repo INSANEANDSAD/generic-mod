@@ -1,6 +1,6 @@
 const pyraShoot = new Effect(32, e => {
 	Draw.color(Pal.lightPyraFlame, Pal.darkPyraFlame, Color.gray, e.fin());
-    Angles.randLenVectors(e.id, 24, e.finpow() * 220, e.rotation, 6, new Floatc2(){get: (x, y) => {
+    Angles.randLenVectors(e.id, 24, e.finpow() * 190, e.rotation, 6, new Floatc2(){get: (x, y) => {
         Fill.circle(e.x + x, e.y + y, 1.2 + e.fout() * 2.4);
     }});
 });
@@ -8,7 +8,7 @@ const pyraShoot = new Effect(32, e => {
 const flamePyra=extend(BulletType,{});
 flamePyra.damage=45;
 flamePyra.hitSize=7;
-flamePyra.lifetime=36;
+flamePyra.lifetime=30;
 flamePyra.length=12;
 flamePyra.width=6;
 flamePyra.speed=6;
@@ -37,8 +37,8 @@ artilleryFrag.frontColor=Pal.missileYellow;
 const flameArtillery=extend(ArtilleryBulletType,{});
 flameArtillery.lifetime=170;
 flameArtillery.speed=2.5;
-flameArtillery.splashDamage=120;
-flameArtillery.splashDamageRadius=80;
+flameArtillery.splashDamage=110;
+flameArtillery.splashDamageRadius=72;
 flameArtillery.hitEffect=Fx.massiveExplosion;
 flameArtillery.width=27;
 flameArtillery.height=27;
@@ -54,7 +54,6 @@ catapultFlam.x=4;
 catapultFlam.y=12;
 catapultFlam.reload=5;
 catapultFlam.rotate=true;
-catapultFlam.alternate=false;
 catapultFlam.recoil=1;
 catapultFlam.mirror=true;
 catapultFlam.bullet=flamePyra;
@@ -65,7 +64,6 @@ catapultFlamB.x=8;
 catapultFlamB.y=-12;
 catapultFlamB.reload=5;
 catapultFlamB.rotate=true;
-catapultFlamB.alternate=false;
 catapultFlamB.recoil=1;
 catapultFlamB.mirror=true;
 catapultFlamB.bullet=flamePyra;

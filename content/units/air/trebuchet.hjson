@@ -1,0 +1,24 @@
+flying: true
+speed: 0.85
+accel: 0.07
+drag: 0.03
+health: 14500
+engineOffset: 45
+engineSize: 8
+armor: 9
+localizedName: Trebuchet
+rotateSpeed: 1
+description: "More firepower! (and also a repair field)"
+rotateShooting: false
+commandLimit: 8
+lowAltitude: true
+research: 4.5-reconstructor
+hitSize: 30
+abilities: [
+  {
+    type: RepairFieldAbility
+    radius: 100
+    reload: 60
+    amount: 140
+  }
+]
