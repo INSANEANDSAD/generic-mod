@@ -1,0 +1,55 @@
+type: reconstructor
+localizedName: Rebuilder
+health: 500
+size: 7
+itemCapacity: 125
+constructTime: 2500
+
+requirements: [
+    phase-fabric/750
+    plastanium/550
+    hardenedtitanium/750
+    surge-alloy/550
+    thorium/450
+    silicon/450
+]
+
+upgrades: [
+    [catapult, trebuchet]
+]
+
+consumes: {
+    
+    items: {
+        items: [
+            {
+                item: surge-alloy
+                amount: 650
+            },
+            {
+                item: silicon
+                amount: 850
+            },
+            {
+                item: plastanium
+                amount: 750
+            },
+            {
+                item: phase-fabric
+                amount: 750
+            },
+            {
+                item: hardenedtitanium
+                amount: 780
+            }
+        ]
+    }
+    power: 23
+    liquid: {
+     liquid: cryofluid
+     amount: 1
+    }
+}
+
+category: units
+research: 4.5-reconstructor
