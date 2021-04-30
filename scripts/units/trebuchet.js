@@ -136,7 +136,7 @@ trebuchetLaser.continuous=true;
 trebuchetLaser.bullet=trebuchetL;
 
 const trebuchet = extendContent(UnitType, "trebuchet", {});
-trebuchet.weapons.add(createFlakWeapon(16,20,flakL,20), createFlakWeapon(20,-24,flakL,20), createFlakWeapon(11,37,Bullets.fragSurge,4));
+trebuchet.weapons.add(createFlakWeapon(16,20,flakL,20), createFlakWeapon(20,-24,flakL,20), createFlakWeapon(11,37,Bullets.fragSurge,2));
 trebuchet.weapons.add(trebuchetArtillery, trebuchetFlame, trebuchetLaser);
 trebuchet.constructor = () => { 
 	const unit = extend(UnitEntity, {});
