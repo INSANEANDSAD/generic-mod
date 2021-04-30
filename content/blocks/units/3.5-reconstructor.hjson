@@ -25,7 +25,7 @@ consumes: {
             },
             {
                 item: graphite
-                amount: 40
+                amount: 55
             },
             {
                 item: hardenedtitanium
