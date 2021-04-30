@@ -24,7 +24,7 @@ consumes: {
         items: [
             {
                 item: surge-alloy
-                amount: 650
+                amount: 850
             },
             {
                 item: silicon
@@ -36,15 +36,15 @@ consumes: {
             },
             {
                 item: phase-fabric
-                amount: 750
+                amount: 1000
             },
             {
                 item: hardenedtitanium
-                amount: 780
+                amount: 1000
             }
         ]
     }
-    power: 23
+    power: 26
     liquid: {
      liquid: cryofluid
      amount: 1
