@@ -1,3 +1,4 @@
+const lazy = require("name/lazy");
 const pyraShoot = new Effect(32, e => {
 	Draw.color(Pal.lightPyraFlame, Pal.darkPyraFlame, Color.gray, e.fin());
     Angles.randLenVectors(e.id, 24, e.finpow() * 220, e.rotation, 6, new Floatc2(){get: (x, y) => {
@@ -5,9 +6,21 @@ const pyraShoot = new Effect(32, e => {
     }});
 });
 
+const shellHit = new Effect(24, e => {
+  var lThick = e.fout() * 3;
+  var lDist = Mathf.lerp(20, 100, e.finpow());
+  var lLen = Mathf.lerp(14, 1, e.fin());
+  lazy.splashL(e.x, e.y, Pal.missileYellow, lThick, lDist, lLen, 40, e.id);
+  var sAlpha = 0.3 + e.fout() * 0.7;
+  var sRadius = Mathf.lerp(14, 1, e.fin());
+  Angles.randLenVectors(e.id, 36, Mathf.lerp(5, 84, e.finpow()), new Floatc2(){get: (a, b) => {
+    lazy.fillC(e.x + a, e.y + b, Color.gray, sAlpha, sRadius);
+  }});
+});
+
 const flakL=extend(FlakBulletType,{});
-flakL.lifetime=70;
-flakL.speed=6;
+flakL.lifetime=30;
+flakL.speed=10;
 flakL.splashDamage=60;
 flakL.damage=26;
 flakL.splashDamageRadius=40;
@@ -16,7 +29,8 @@ flakL.status=StatusEffects.blasted;
 flakL.length=31;
 flakL.width=10;
 flakL.collidesGround=true;
-flakL.fragBullet=Bullets.fragExplosive
+flakL.fragBullet=Bullets.fragSurge;
+flakL.fragBullets=7;
 flakL.shootEffect=Fx.shootBig;
 flakL.explodeRange=24;
 
@@ -61,22 +75,22 @@ artilleryFrag.frontColor=Pal.missileYellow;
 
 const flameArtillery=extend(ArtilleryBulletType,{});
 flameArtillery.lifetime=150;
-flameArtillery.speed=3.5;
-flameArtillery.splashDamage=170;
-flameArtillery.splashDamageRadius=88;
-flameArtillery.hitEffect=Fx.massiveExplosion;
-flameArtillery.width=27;
-flameArtillery.height=27;
+flameArtillery.speed=3.2;
+flameArtillery.splashDamage=245;
+flameArtillery.splashDamageRadius=96;
+flameArtillery.hitEffect=shellHit;
+flameArtillery.width=24;
+flameArtillery.height=24;
 flameArtillery.backColor=Color.valueOf("ff7568");
 flameArtillery.frontColor=Color.valueOf("ff7987");
 flameArtillery.fragBullet=artilleryFrag;
-flameArtillery.fragBullets=12;
+flameArtillery.fragBullets=10;
 
 function createFlakWeapon(x, y, bullet) {
 	const trebuchetFlak = extendContent(Weapon, "large-artillery", {});
 	trebuchetFlak.x=x;
 	trebuchetFlak.y=y;
-	trebuchetFlak.reload=15;
+	trebuchetFlak.reload=25;
 	trebuchetFlak.rotate=true;
 	trebuchetFlak.recoil=1;
 	trebuchetFlak.mirror=true;
