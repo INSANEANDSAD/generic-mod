@@ -30,7 +30,6 @@ flakL.length=31;
 flakL.width=10;
 flakL.collidesGround=true;
 flakL.fragBullet=Bullets.fragSurge;
-flakL.fragBullets=3;
 flakL.shootEffect=Fx.shootBig;
 flakL.explodeRange=24;
 
