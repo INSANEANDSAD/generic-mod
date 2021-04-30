@@ -13,7 +13,7 @@ rotateShooting: false
 commandLimit: 8
 lowAltitude: true
 research: 4.5-reconstructor
-hitSize: 30
+hitSize: 40
 abilities: [
   {
     type: RepairFieldAbility

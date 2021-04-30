@@ -22,14 +22,14 @@ const flakL=extend(FlakBulletType,{});
 flakL.lifetime=30;
 flakL.speed=10;
 flakL.splashDamage=60;
-flakL.damage=26;
-flakL.splashDamageRadius=40;
+flakL.damage=30;
+flakL.splashDamageRadius=34;
 flakL.hitEffect=Fx.flakExplosion;
 flakL.status=StatusEffects.blasted;
 flakL.length=31;
 flakL.width=10;
 flakL.collidesGround=true;
-flakL.fragBullet=Bullets.fragSurge;
+flakL.fragBullet=Bullets.fragPlastic;
 flakL.fragBullets=7;
 flakL.shootEffect=Fx.shootBig;
 flakL.explodeRange=24;
@@ -86,11 +86,11 @@ flameArtillery.frontColor=Color.valueOf("ff7987");
 flameArtillery.fragBullet=artilleryFrag;
 flameArtillery.fragBullets=10;
 
-function createFlakWeapon(x, y, bullet) {
+function createFlakWeapon(x, y, bullet, reload) {
 	const trebuchetFlak = extendContent(Weapon, "large-artillery", {});
 	trebuchetFlak.x=x;
 	trebuchetFlak.y=y;
-	trebuchetFlak.reload=25;
+	trebuchetFlak.reload=reload;
 	trebuchetFlak.rotate=true;
 	trebuchetFlak.recoil=1;
 	trebuchetFlak.mirror=true;
@@ -126,7 +126,7 @@ const trebuchetLaser = extendContent(Weapon, "name-beam-weapon", {	});
 
 trebuchetLaser.y=-25;
 trebuchetLaser.x=33;
-trebuchetLaser.reload=70;
+trebuchetLaser.reload=40;
 trebuchetLaser.recoil=2;
 trebuchetLaser.ejectEffect=Fx.casing2;
 trebuchetLaser.shootSound=Sounds.beam;
@@ -136,7 +136,7 @@ trebuchetLaser.continuous=true;
 trebuchetLaser.bullet=trebuchetL;
 
 const trebuchet = extendContent(UnitType, "trebuchet", {});
-trebuchet.weapons.add(createFlakWeapon(16,20,flakL), createFlakWeapon(20,-24,flakL), createFlakWeapon(11,37,flakL));
+trebuchet.weapons.add(createFlakWeapon(16,20,flakL,20), createFlakWeapon(20,-24,flakL,20), createFlakWeapon(11,37,Bullets.fragSurge,4));
 trebuchet.weapons.add(trebuchetArtillery, trebuchetFlame, trebuchetLaser);
 trebuchet.constructor = () => { 
 	const unit = extend(UnitEntity, {});
