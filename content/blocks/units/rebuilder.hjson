@@ -1,7 +1,7 @@
 type: reconstructor
 localizedName: Rebuilder
-health: 500
-size: 7
+health: 900
+size: 9
 itemCapacity: 125
 constructTime: 2500
 
