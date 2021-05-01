@@ -1,7 +1,7 @@
 const lazy = require("name/lazy");
 const pyraShoot = new Effect(32, e => {
 	Draw.color(Pal.lightPyraFlame, Pal.darkPyraFlame, Color.gray, e.fin());
-    Angles.randLenVectors(e.id, 24, e.finpow() * 220, e.rotation, 6, new Floatc2(){get: (x, y) => {
+    Angles.randLenVectors(e.id, 24, e.finpow() * 180, e.rotation, 6, new Floatc2(){get: (x, y) => {
         Fill.circle(e.x + x, e.y + y, 1.2 + e.fout() * 2.4);
     }});
 });
@@ -19,7 +19,7 @@ const shellHit = new Effect(24, e => {
 });
 
 const flakL=extend(FlakBulletType,{});
-flakL.lifetime=26;
+flakL.lifetime=30;
 flakL.speed=10;
 flakL.splashDamage=80;
 flakL.damage=35;
@@ -31,7 +31,7 @@ flakL.width=10;
 flakL.collidesGround=true;
 flakL.lightning=4;
 flakL.lightningLength=14;
-flakL.lightningDamage=63;
+flakL.lightningDamage=60;
 flakL.shootEffect=Fx.shootBig;
 flakL.explodeRange=24;
 
@@ -46,9 +46,9 @@ trebuchetL.lifetime=10
 trebuchetL.width=28;
 
 const flamePyra=extend(BulletType,{});
-flamePyra.damage=110;
+flamePyra.damage=120;
 flamePyra.hitSize=7;
-flamePyra.lifetime=36;
+flamePyra.lifetime=30;
 flamePyra.length=12;
 flamePyra.width=6;
 flamePyra.speed=6;
@@ -107,18 +107,21 @@ function createFlakWeapon(x, y, bullet, reload) {
 	trebuchetFlak.inaccuracy=3;
 	return trebuchetFlak
 }
+function createFlameWeapon(x,y) {
 const trebuchetFlame = extendContent(Weapon, "name-flamethrowerair", {});
-trebuchetFlame.x=8;
-trebuchetFlame.y=-24;
-trebuchetFlame.reload=4;
-trebuchetFlame.shots=3;
-trebuchetFlame.inaccuracy=3;
-trebuchetFlame.rotate=true;
-trebuchetFlame.recoil=1;
-trebuchetFlame.mirror=true;
-trebuchetFlame.bullet=flamePyra;
-trebuchetFlame.shootSound=Sounds.flame;
-
+	trebuchetFlame.x=x;
+	trebuchetFlame.y=y;
+	trebuchetFlame.reload=4;
+	trebuchetFlame.shots=3;
+	trebuchetFlame.inaccuracy=3;
+	trebuchetFlame.rotate=true;
+	trebuchetFlame.recoil=1;
+	trebuchetFlame.mirror=true;
+	trebuchetFlame.bullet=flamePyra;
+	trebuchetFlame.shootSound=Sounds.flame;
+	return trebuchetFlame
+}
+createFlameWeapon(8,-24)
 const trebuchetArtillery = extendContent(Weapon, "name-artilleryairbiggest", {});
 
 trebuchetArtillery.y=0;
@@ -145,8 +148,8 @@ trebuchetLaser.continuous=true;
 trebuchetLaser.bullet=trebuchetL;
 
 const trebuchet = extendContent(UnitType, "trebuchet", {});
-trebuchet.weapons.add(createFlakWeapon(16,20,flakL,10), createFlakWeapon(20,-24,flakL,10), createFlakWeapon(11,37,flakL,10));
-trebuchet.weapons.add(trebuchetArtillery, trebuchetFlame, trebuchetLaser);
+trebuchet.weapons.add(createFlakWeapon(16,20,flakL,7), createFlakWeapon(20,-24,flakL,7));
+trebuchet.weapons.add(trebuchetArtillery, createFlameWeapon(8,-24), createFlameWeapon(11, 37), trebuchetLaser);
 trebuchet.constructor = () => { 
 	const unit = extend(UnitEntity, {});
 	return unit
