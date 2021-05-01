@@ -7,29 +7,31 @@ const pyraShoot = new Effect(32, e => {
 });
 
 const shellHit = new Effect(24, e => {
-  var lThick = e.fout() * 3;
-  var lDist = Mathf.lerp(20, 100, e.finpow());
-  var lLen = Mathf.lerp(14, 1, e.fin());
-  lazy.splashL(e.x, e.y, Pal.missileYellow, lThick, lDist, lLen, 40, e.id);
-  var sAlpha = 0.3 + e.fout() * 0.7;
-  var sRadius = Mathf.lerp(14, 1, e.fin());
-  Angles.randLenVectors(e.id, 36, Mathf.lerp(5, 84, e.finpow()), new Floatc2(){get: (a, b) => {
-    lazy.fillC(e.x + a, e.y + b, Color.gray, sAlpha, sRadius);
+    var lThick = e.fout() * 3;
+    var lDist = Mathf.lerp(20, 100, e.finpow());
+    var lLen = Mathf.lerp(14, 1, e.fin());
+    lazy.splashL(e.x, e.y, Pal.missileYellow, lThick, lDist, lLen, 40, e.id);
+    var sAlpha = 0.3 + e.fout() * 0.7;
+    var sRadius = Mathf.lerp(14, 1, e.fin());
+    Angles.randLenVectors(e.id, 36, Mathf.lerp(5, 84, e.finpow()), new Floatc2(){get: (a, b) => {
+        lazy.fillC(e.x + a, e.y + b, Color.gray, sAlpha, sRadius);
   }});
 });
 
 const flakL=extend(FlakBulletType,{});
-flakL.lifetime=30;
+flakL.lifetime=26;
 flakL.speed=10;
-flakL.splashDamage=70;
+flakL.splashDamage=80;
 flakL.damage=35;
-flakL.splashDamageRadius=34;
+flakL.splashDamageRadius=36;
 flakL.hitEffect=Fx.flakExplosion;
-flakL.status=StatusEffects.blasted;
+flakL.status=StatusEffects.shocked;
 flakL.length=31;
 flakL.width=10;
 flakL.collidesGround=true;
-flakL.fragBullet=Bullets.fragSurge;
+flakL.lightning=4;
+flakL.lightningLength=14;
+flakL.lightningDamage=63;
 flakL.shootEffect=Fx.shootBig;
 flakL.explodeRange=24;
 
@@ -61,7 +63,7 @@ flamePyra.hittable=false;
 flamePyra.ammoMultiplier=15;
 
 const artilleryFrag=extend(ArtilleryBulletType,{});
-artilleryFrag.lifetime=60;
+artilleryFrag.lifetime=80;
 artilleryFrag.speed=1.2;
 artilleryFrag.splashDamage=70;
 artilleryFrag.splashDamageRadius=40;
@@ -72,9 +74,16 @@ artilleryFrag.homingPower=0.04;
 artilleryFrag.backColor=Pal.missileYellowBack;
 artilleryFrag.frontColor=Pal.missileYellow;
 
-const flameArtillery=extend(ArtilleryBulletType,{});
-flameArtillery.lifetime=150;
-flameArtillery.speed=3.2;
+const flameArtillery=extend(ArtilleryBulletType,{
+    update(b,x,y) {
+    this.super$update(b)
+    if(b.timer.get(1,2)){
+        artilleryFrag.create(b, b.x, b.y, b.rotation() + Mathf.random(180) - 90);
+    }
+    }
+});
+flameArtillery.lifetime=210;
+flameArtillery.speed=3.1;
 flameArtillery.splashDamage=245;
 flameArtillery.splashDamageRadius=96;
 flameArtillery.hitEffect=shellHit;
@@ -101,9 +110,10 @@ function createFlakWeapon(x, y, bullet, reload) {
 const trebuchetFlame = extendContent(Weapon, "name-flamethrowerair", {});
 trebuchetFlame.x=8;
 trebuchetFlame.y=-24;
-trebuchetFlame.reload=2;
+trebuchetFlame.reload=4;
+trebuchetFlame.shots=3;
+trebuchetFlame.inaccuracy=3;
 trebuchetFlame.rotate=true;
-trebuchetFlame.alternate=false;
 trebuchetFlame.recoil=1;
 trebuchetFlame.mirror=true;
 trebuchetFlame.bullet=flamePyra;
