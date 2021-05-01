@@ -40,8 +40,8 @@ trebuchetL.damage=200;
 trebuchetL.hitEffect=Fx.flakExplosion;
 trebuchetL.status=StatusEffects.shocked;
 trebuchetL.length=330;
-trebuchetL.lifetime=30;
-trebuchetL.width=28;
+trebuchetL.lifetime=10;
+trebuchetL.width=8;
 
 const flamePyra=extend(BulletType,{});
 flamePyra.damage=120;
@@ -138,7 +138,7 @@ function createLaserWeapon(x,y) {
 	const trebuchetLaser = extendContent(Weapon, "name-beam-weapon", {	});
 	trebuchetLaser.y=y;
 	trebuchetLaser.x=x;
-	trebuchetLaser.reload=15;
+	trebuchetLaser.reload=20;
 	trebuchetLaser.recoil=2;
 	trebuchetLaser.ejectEffect=Fx.casing2;
 	trebuchetLaser.shootSound=Sounds.beam;
@@ -153,7 +153,7 @@ function createLaserWeapon(x,y) {
 const trebuchet = extendContent(UnitType, "trebuchet", {});
 trebuchet.weapons.add(createFlakWeapon(16,20,flakL,7), createFlakWeapon(20,-24,flakL,7));
 trebuchet.weapons.add(trebuchetArtillery, createFlameWeapon(8,-24), createFlameWeapon(11, 37));
-trebuchet.weapons.add(createLaserWeapon(-28,35), createLaserWeapon(-21,30));
+trebuchet.weapons.add(createLaserWeapon(35,-28), createLaserWeapon(30,-21));
 trebuchet.constructor = () => { 
 	const unit = extend(UnitEntity, {});
 	return unit
