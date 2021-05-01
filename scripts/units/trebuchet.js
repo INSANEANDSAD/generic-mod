@@ -29,20 +29,18 @@ flakL.status=StatusEffects.shocked;
 flakL.length=31;
 flakL.width=10;
 flakL.collidesGround=true;
-flakL.lightning=4;
+flakL.lightning=3;
 flakL.lightningLength=14;
 flakL.lightningDamage=60;
 flakL.shootEffect=Fx.shootBig;
 flakL.explodeRange=24;
 
-const trebuchetL=extend(LaserBulletType,{});
+const trebuchetL=extend(ContinuousLaserBulletType,{});
 trebuchetL.damage=200;
-trebuchetL.splashDamage=100;
-trebuchetL.splashDamageRadius=36;
 trebuchetL.hitEffect=Fx.flakExplosion;
 trebuchetL.status=StatusEffects.shocked;
-trebuchetL.length=340;
-trebuchetL.lifetime=10
+trebuchetL.length=330;
+trebuchetL.lifetime=30;
 trebuchetL.width=28;
 
 const flamePyra=extend(BulletType,{});
@@ -51,6 +49,9 @@ flamePyra.hitSize=7;
 flamePyra.lifetime=30;
 flamePyra.length=12;
 flamePyra.width=6;
+flamePyra.lightning=1;
+flamePyra.lightningLength=8;
+flamePyra.lightningDamage=35;
 flamePyra.speed=6;
 flamePyra.pierce=true;
 flamePyra.collidesAir=true;
@@ -113,7 +114,7 @@ const trebuchetFlame = extendContent(Weapon, "name-flamethrowerair", {});
 	trebuchetFlame.y=y;
 	trebuchetFlame.reload=4;
 	trebuchetFlame.shots=3;
-	trebuchetFlame.inaccuracy=3;
+	trebuchetFlame.inaccuracy=8;
 	trebuchetFlame.rotate=true;
 	trebuchetFlame.recoil=1;
 	trebuchetFlame.mirror=true;
@@ -121,7 +122,7 @@ const trebuchetFlame = extendContent(Weapon, "name-flamethrowerair", {});
 	trebuchetFlame.shootSound=Sounds.flame;
 	return trebuchetFlame
 }
-createFlameWeapon(8,-24)
+
 const trebuchetArtillery = extendContent(Weapon, "name-artilleryairbiggest", {});
 
 trebuchetArtillery.y=0;
@@ -133,23 +134,26 @@ trebuchetArtillery.shootSound=Sounds.artillery;
 trebuchetArtillery.rotate=true;
 trebuchetArtillery.mirror=false;
 trebuchetArtillery.bullet=flameArtillery;
-
-const trebuchetLaser = extendContent(Weapon, "name-beam-weapon", {	});
-
-trebuchetLaser.y=-25;
-trebuchetLaser.x=33;
-trebuchetLaser.reload=15;
-trebuchetLaser.recoil=2;
-trebuchetLaser.ejectEffect=Fx.casing2;
-trebuchetLaser.shootSound=Sounds.beam;
-trebuchetLaser.rotate=true;
-trebuchetLaser.mirror=true;
-trebuchetLaser.continuous=true;
-trebuchetLaser.bullet=trebuchetL;
+function createLaserWeapon(x,y) {
+	const trebuchetLaser = extendContent(Weapon, "name-beam-weapon", {	});
+	trebuchetLaser.y=x;
+	trebuchetLaser.x=y;
+	trebuchetLaser.reload=15;
+	trebuchetLaser.recoil=2;
+	trebuchetLaser.ejectEffect=Fx.casing2;
+	trebuchetLaser.shootSound=Sounds.beam;
+	trebuchetLaser.rotate=true;
+	trebuchetLaser.mirror=true;
+	trebuchetLaser.continuous=true;
+	trebuchetLaser.bullet=trebuchetL;
+	return trebuchetLaser
+}
+-25,33
 
 const trebuchet = extendContent(UnitType, "trebuchet", {});
 trebuchet.weapons.add(createFlakWeapon(16,20,flakL,7), createFlakWeapon(20,-24,flakL,7));
-trebuchet.weapons.add(trebuchetArtillery, createFlameWeapon(8,-24), createFlameWeapon(11, 37), trebuchetLaser);
+trebuchet.weapons.add(trebuchetArtillery, createFlameWeapon(8,-24), createFlameWeapon(11, 37));
+trebuchet.weapons.add(createLaserWeapon(-28,35), createLaserWeapon(-21,30));
 trebuchet.constructor = () => { 
 	const unit = extend(UnitEntity, {});
 	return unit
