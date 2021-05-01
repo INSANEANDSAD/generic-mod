@@ -136,8 +136,8 @@ trebuchetArtillery.mirror=false;
 trebuchetArtillery.bullet=flameArtillery;
 function createLaserWeapon(x,y) {
 	const trebuchetLaser = extendContent(Weapon, "name-beam-weapon", {	});
-	trebuchetLaser.y=x;
-	trebuchetLaser.x=y;
+	trebuchetLaser.y=y;
+	trebuchetLaser.x=x;
 	trebuchetLaser.reload=15;
 	trebuchetLaser.recoil=2;
 	trebuchetLaser.ejectEffect=Fx.casing2;
