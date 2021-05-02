@@ -1,0 +1,29 @@
+speed: 2.2
+health: 160
+armor: 0
+type: mech
+range: 80
+flying: false
+rotateSpeed: 4
+hitSize: 9
+weapons: [
+  {
+    name: shrapnel
+    y: 2
+    x: 3.8
+    reload: 45
+    inaccuracy: 7
+    shots: 3
+    top: false
+    ejectEffect: casing1
+    bullet: {
+     type: ShrapnelBulletType
+     width: 10
+     length: 85
+     shootEffect: shootSmall
+     smokeEffect: shootSmallSmoke
+     damage: 37
+    }
+  }
+]
+research: hail-reconstructor
