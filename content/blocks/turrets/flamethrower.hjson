@@ -1,6 +1,4 @@
 localizedName: Flamethrower
-description: A big Scorch. Does massive damage at medium range. Needs some serious "balancing"
-details: Yes, it requires pyratite and blast compound to build. Don't ask why...
 health: 1000
 itemCapacity: 20
 size: 3

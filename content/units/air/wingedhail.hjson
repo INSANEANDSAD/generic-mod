@@ -4,7 +4,6 @@ health: 245
 engineOffset: 5.5
 range: 210
 armor: 3
-localizedName: Ballista
 rotateShooting: false
 hitSize: 10
 weapons: [

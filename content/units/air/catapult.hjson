@@ -7,8 +7,6 @@ engineOffset: 20
 engineSize: 5
 range: 425
 armor: 9
-localizedName: Catapult
-description: "A powerful unit equipped with flamethrowers and a compact and powerful cannon"
 rotateShooting: false
 commandLimit: 9
 lowAltitude: true

@@ -7,8 +7,6 @@ engineOffset: 12
 engineSize: 2
 range: 260
 armor: 4
-localizedName: Onager
-description: "Equipped with two cannons, and an oversized central cannon. "
 rotateShooting: false
 commandLimit: 9
 hitSize: 20

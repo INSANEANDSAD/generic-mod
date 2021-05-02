@@ -6,9 +6,7 @@ health: 16500
 engineOffset: 45
 engineSize: 9
 armor: 9
-localizedName: Trebuchet
 rotateSpeed: 1
-description: "More firepower! (and also a repair field)"
 rotateShooting: false
 commandLimit: 8
 lowAltitude: true
