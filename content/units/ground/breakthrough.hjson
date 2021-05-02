@@ -6,25 +6,30 @@ range: 80
 flying: false
 rotateSpeed: 3.6
 hitSize: 13
+faceTarget: false
 weapons: [
   {
     name: clear
-    reload: 6
+    reload: 5
     shootY: -8
     inaccuracy: 6
     shots: 1
     mirror: false
+    ignoreRotation: true
+    rotates: true
     x: 0
     y: 0
+    shootCone: 270
+    rotateSpeed: 16
     top: false
     bullet: {
      type: BasicBulletType
-     width: 7
-     height: 7
+     width: 9
+     height: 12
      lifetime: 60
      sprite: shell
-     speed: 0.6
-     drag: 0.04
+     speed: 0
+     drag: 0
      keepVelocity: false
      shootEffect: shootSmall
      smokeEffect: shootSmallSmoke
