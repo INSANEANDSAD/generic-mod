@@ -8,21 +8,21 @@ weapons: [
   {
     name: speed-weapon
     y: 2
-    x: 4
+    x: 3.8
     reload: 80
     inaccuracy: 5
-    shots: 6
+    shots: 7
     top: false
     ejectEffect: casing1
     bullet: {
      type: BasicBulletType
      width: 5
      height: 7
-     lifetime: 40
+     lifetime: 35
      speed: 3.4
      shootEffect: shootSmall
      smokeEffect: shootSmallSmoke
-     damage: 10
+     damage: 9
      homingPower: 0.06
      homingRange: 36
     }
