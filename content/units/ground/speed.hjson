@@ -1,4 +1,4 @@
-speed: 1.6
+speed: 1.7
 health: 70
 armor: 0
 type: mech
@@ -12,7 +12,7 @@ weapons: [
     y: 2
     x: 3.8
     reload: 40
-    inaccuracy: 6
+    inaccuracy: 8
     shots: 6
     top: false
     ejectEffect: casing1

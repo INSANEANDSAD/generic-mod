@@ -1,5 +1,5 @@
-speed: 2.4
-health: 450
+speed: 2.5
+health: 350
 armor: 0
 type: mech
 range: 80
@@ -7,10 +7,13 @@ flying: false
 rotateSpeed: 3.6
 hitSize: 13
 faceTarget: false
+rotateShooting: false
+targetAir: false
+circleTarget: true
 weapons: [
   {
     name: clear
-    reload: 5
+    reload: 7
     shootY: -8
     inaccuracy: 6
     shots: 1
@@ -26,15 +29,17 @@ weapons: [
      type: BasicBulletType
      width: 9
      height: 12
-     lifetime: 60
+     lifetime: 100
      sprite: shell
-     speed: 0
-     drag: 0
+     speed: 0.7
+     drag: 0.01
      keepVelocity: false
      shootEffect: shootSmall
      smokeEffect: shootSmallSmoke
-     splashDamage: 100
-     splashDamageRadius: 48
+     splashDamage: 90
+     splashDamageRadius: 54
+     homingPower: 0.02
+     homingRange: 48
     }
   }
 ]
