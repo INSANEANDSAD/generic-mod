@@ -1,0 +1,50 @@
+range: 200
+ammoTypes: {
+  
+  copper: {
+  damage: 12
+  width: 10
+  length: 13
+  speed: 3
+  lifetime: 70
+  ammoMultiplier: 2
+ }
+  silicon: {
+  damage: 16
+  width: 10
+  length: 13
+  speed: 3.5
+  lifetime: 60
+  homingPower: 0.07
+  reloadMultiplier: 1.55
+  ammoMultiplier: 4
+ }
+ graphite: {
+  damage: 26
+  width: 11
+  length: 14
+  speed: 3.5
+  lifetime: 60
+  ammoMultiplier: 4
+ }
+ pyratite: {
+  damage: 16
+  width: 10
+  length: 13
+  status: burning
+  frontColor: lightOrange
+  backColor: lightishOrange
+  ammoMultiplier: 4
+  makeFire: true
+  speed: 3.5
+  lifetime: 60
+ }
+  thorium: {
+  damage: 36
+  width: 11
+  length: 14
+  speed: 3.5
+  lifetime: 60
+  ammoMultiplier: 5
+ }
+}
