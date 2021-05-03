@@ -29,17 +29,20 @@ weapons: [
      type: BasicBulletType
      width: 9
      height: 12
-     lifetime: 100
+     lifetime: 110
      sprite: shell
-     speed: 0.7
+     speed: 0.65
      drag: 0.01
      keepVelocity: false
      shootEffect: shootSmall
      smokeEffect: shootSmallSmoke
-     splashDamage: 90
+     splashDamage: 60
      splashDamageRadius: 54
-     homingPower: 0.02
-     homingRange: 48
+     fragBullet: fragPlasticFrag
+     fragBullets: 8
+     hitEffect: blastExplosion
+     homingPower: 0.015
+     homingRange: 54
     }
   }
 ]

@@ -13,7 +13,8 @@ requirements: [
 ]
 
 upgrades: [
-    [wingedhail, onager]
+    [wingedhail, onager],
+    [velocity, breakthrough]
 ]
 
 consumes: {
