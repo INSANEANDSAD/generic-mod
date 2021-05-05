@@ -1,0 +1,86 @@
+speed: 2.9
+health: 1650
+armor: 0
+type: legs
+range: 120
+flying: false
+rotateSpeed: 3.6
+hitSize: 13
+faceTarget: false
+rotateShooting: false
+circleTarget: true
+hovering: true
+legCount: 6
+legLength: 30
+legTrns: 0.8
+legMoveSpace: 1.2
+legBaseOffset: 10
+legPairOffset: 3
+legExtension: -15
+landShake: 0.6
+buildSpeed: 3
+weapons: [
+  {
+    name: clear
+    reload: 7
+    shootY: -16
+    inaccuracy: 6
+    shots: 1
+    mirror: false
+    ignoreRotation: true
+    rotates: true
+    x: 0
+    y: 0
+    shootCone: 360
+    rotateSpeed: 16
+    top: false
+    bullet: {
+     type: BasicBulletType
+     width: 12
+     height: 16
+     lifetime: 110
+     sprite: shell
+     speed: 0.65
+     drag: 0.01
+     keepVelocity: false
+     shootEffect: shootSmall
+     smokeEffect: shootSmallSmoke
+     splashDamage: 160
+     splashDamageRadius: 66
+     fragBullet: fragPlasticFrag
+     fragBullets: 11
+     hitEffect: massiveExplosion
+     homingPower: 0.015
+     homingRange: 54
+    }
+  },
+  {
+    name: charge-weapon
+    reload: 6
+    shootY: 0
+    inaccuracy: 8
+    shots: 2
+    mirror: false
+    rotates: true
+    x: 0
+    y: 0
+    shootCone: 30
+    rotateSpeed: 3
+    top: false
+    bullet: {
+     type: FlakBulletType
+     width: 5
+     height: 7
+     lifetime: 40
+     speed: 3
+     shootEffect: shootBig
+     smokeEffect: shootSmallSmoke
+     damage: 0
+     collidesGround: true
+     splashDamage: 55
+     splashDamageRadius: 45
+     fragBullet: fragPlasticFrag
+    }
+  }
+]
+research: 4.5-reconstructor

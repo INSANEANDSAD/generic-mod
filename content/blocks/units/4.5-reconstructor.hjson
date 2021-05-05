@@ -15,7 +15,8 @@ requirements: [
 ]
 
 upgrades: [
-    [onager, catapult]
+    [onager, catapult],
+    [breakthrough, charge]
 ]
 
 consumes: {

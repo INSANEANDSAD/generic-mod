@@ -39,7 +39,7 @@ weapons: [
      splashDamage: 60
      splashDamageRadius: 54
      fragBullet: fragPlasticFrag
-     fragBullets: 8
+     fragBullets: 6
      hitEffect: blastExplosion
      homingPower: 0.015
      homingRange: 54
