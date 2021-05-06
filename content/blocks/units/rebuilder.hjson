@@ -15,7 +15,8 @@ requirements: [
 ]
 
 upgrades: [
-    [catapult, trebuchet]
+    [charge, volt]
+    [catapult, trebuchet],
 ]
 
 consumes: {

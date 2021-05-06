@@ -6,6 +6,9 @@ range: 80
 flying: false
 rotateSpeed: 4
 hitSize: 9
+buildSpeed: 2
+mineTier: 3
+mineSpeed: 6
 weapons: [
   {
     name: shrapnel

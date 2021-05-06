@@ -142,7 +142,7 @@ trebuchetArtillery.rotate=true;
 trebuchetArtillery.mirror=false;
 trebuchetArtillery.bullet=flameArtillery;
 function createLaserWeapon(x,y) {
-	const trebuchetLaser = extendContent(Weapon, "name-beam-weapon", {	});
+	const trebuchetLaser = extendContent(Weapon, "name-beam-weapon", {});
 	trebuchetLaser.y=y;
 	trebuchetLaser.x=x;
 	trebuchetLaser.reload=40;

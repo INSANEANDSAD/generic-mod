@@ -10,6 +10,8 @@ faceTarget: false
 rotateShooting: false
 targetAir: false
 circleTarget: true
+mineTier: 4
+mineSpeed: 13
 weapons: [
   {
     name: clear

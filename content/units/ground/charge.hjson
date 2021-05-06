@@ -5,7 +5,7 @@ type: legs
 range: 140
 flying: false
 rotateSpeed: 3.6
-hitSize: 18
+hitSize: 21
 faceTarget: false
 rotateShooting: false
 circleTarget: true
@@ -19,6 +19,8 @@ legPairOffset: 3
 legExtension: -15
 landShake: 0.6
 buildSpeed: 3
+mineSpeed: 19
+mineTier: 5
 weapons: [
   {
     name: clear
@@ -46,7 +48,7 @@ weapons: [
      shootEffect: shootSmall
      smokeEffect: shootSmallSmoke
      splashDamage: 150
-     splashDamageRadius: 72
+     splashDamageRadius: 64
      lightningDamage: 32
      lightningLength: 11
      lightning: 3
@@ -67,7 +69,7 @@ weapons: [
     y: 0
     shootCone: 30
     rotateSpeed: 3
-    top: false
+    top: true
     bullet: {
      type: FlakBulletType
      width: 5
