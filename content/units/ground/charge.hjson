@@ -19,12 +19,12 @@ legPairOffset: 3
 legExtension: -15
 landShake: 0.6
 buildSpeed: 3
-mineSpeed: 19
+mineSpeed: 16
 mineTier: 5
 weapons: [
   {
     name: clear
-    reload: 3
+    reload: 5
     shootY: -16
     inaccuracy: 6
     shots: 1
@@ -47,9 +47,10 @@ weapons: [
      keepVelocity: false
      shootEffect: shootSmall
      smokeEffect: shootSmallSmoke
-     splashDamage: 150
+     damage: 100
+     splashDamage: 130
      splashDamageRadius: 64
-     lightningDamage: 32
+     lightningDamage: 24
      lightningLength: 11
      lightning: 3
      hitEffect: massiveExplosion

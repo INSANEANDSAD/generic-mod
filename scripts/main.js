@@ -1,7 +1,7 @@
 require("blocks/turret/orb");
 require("blocks/turret/downpour");
 require("blocks/turret/storm");
-require("blocks/turret/salvo-buff");
+require("blocks/turret/black-hole");
 require("blocks/turret/flamethrower");
 require("units/catapult");
 require("units/trebuchet");

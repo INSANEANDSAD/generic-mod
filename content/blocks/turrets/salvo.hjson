@@ -1,6 +1,5 @@
 range: 200
 ammoTypes: {
-  
   copper: {
   damage: 12
   width: 10

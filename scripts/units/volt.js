@@ -8,7 +8,7 @@ const pyraShoot = new Effect(32, e => {
 
 
 const flamePyra=extend(BulletType,{});
-flamePyra.damage=170;
+flamePyra.damage=160;
 flamePyra.hitSize=7;
 flamePyra.lifetime=25;
 flamePyra.length=12;
@@ -24,33 +24,35 @@ flamePyra.status=StatusEffects.burning;
 flamePyra.hittable=false;
 flamePyra.ammoMultiplier=15;
 flamePyra.healPercent=0;
+flamePyra.pierceBuilding=true;
 
 const voltFlame = extendContent(Weapon, "name-flamethrowerair", {});
 voltFlame.x=8;
 voltFlame.y=-1;
-voltFlame.reload=4;
+voltFlame.reload=30;
 voltFlame.shots=2;
 voltFlame.rotateSpeed=6;
 voltFlame.inaccuracy=10;
 voltFlame.rotate=true;
 voltFlame.recoil=1;
 voltFlame.mirror=true;
-voltFlame.top=true;
 voltFlame.bullet=flamePyra;
+voltFlame.top=true;
 voltFlame.shootSound=Sounds.flame;
 
 const vB=extend(BasicBulletType,{});
 vB.width=13;
 vB.height=17;
-vB.lifetime=110;
+vB.lifetime=100;
 vB.speed=0.65;
 vB.drag=0.01;
 vB.keepVelocity=false;
 vB.shootEffect=Fx.shootSmall;
 vB.smokeEffect=Fx.shootSmallSmoke;
-vB.splashDamage=190;
+vB.splashDamage=160;
+vB.damage=110;
 vB.splashDamageRadius=72;
-vB.lightningDamage=38;
+vB.lightningDamage=30;
 vB.lightningLength=10;
 vB.lightning=4;
 vB.hitEffect=Fx.massiveExplosion;
@@ -59,7 +61,7 @@ vB.homingRange=80;
 vB.healPercent=0;
 
 const voltBomb = extendContent(Weapon, "clear", {});
-voltBomb.reload=3;
+voltBomb.reload=2;
 voltBomb.shootY=-16;
 voltBomb.inaccuracy=6;
 voltBomb.shots=1;
@@ -70,7 +72,6 @@ voltBomb.x=0;
 voltBomb.y=0;
 voltBomb.shootCone=360;
 voltBomb.rotateSpeed=16;
-voltBomb.top=false;
 voltBomb.bullet=vB;
 
 

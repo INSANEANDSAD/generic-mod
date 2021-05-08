@@ -13,7 +13,7 @@ recoilAmount: 0.5
 coolantMultiplier: 6
 requirements: [
   blast-compound/80
-  hardenedtitanium/120
+  hardened-titanium/120
   silicon/200
   thorium/80
   pyratite/110

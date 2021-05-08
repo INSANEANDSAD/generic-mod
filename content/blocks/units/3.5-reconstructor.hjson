@@ -29,7 +29,7 @@ consumes: {
                 amount: 55
             },
             {
-                item: hardenedtitanium
+                item: hardened-titanium
                 amount: 40
             }
         ]

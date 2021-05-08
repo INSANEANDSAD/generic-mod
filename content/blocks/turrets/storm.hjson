@@ -75,7 +75,7 @@ ammoTypes: {
     "reloadMultiplier": 1.6
     "hitEffect": flakExplosion
   }
-  hardenedtitanium: {  
+  hardened-titanium: {  
     "type": "BasicBulletType",
     "lifetime": 45,
     "speed": 8,

@@ -20,7 +20,7 @@ consumes: {
   }
 }
 requirements: [
-  hardenedtitanium/70
+  hardened-titanium/70
   plastanium/120
   phase-fabric/50
   thorium/45
@@ -28,4 +28,3 @@ requirements: [
 drawer: drawWeave
 category: crafting
 research: phase-weaver
-idleSoundVolume: 0.5

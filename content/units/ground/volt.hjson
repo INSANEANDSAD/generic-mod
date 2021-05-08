@@ -1,9 +1,9 @@
-speed: 3.6
-health: 4050
+speed: 3.65
+health: 8050
 armor: 9
 flying: false
 rotateSpeed: 3.6
-hitSize: 23
+hitSize: 28
 faceTarget: false
 rotateShooting: false
 lowAltitude: true
@@ -18,11 +18,19 @@ legPairOffset: 3
 legExtension: -20
 landShake: 0.6
 rippleScale: 3
-legSpeed: 1.15
+legSpeed: 1.2
 legSplashDamage: 60
 legSplashRange: 55
 allowLegStep: true
 buildSpeed: 6
 research: rebuilder
-mineSpeed: 27
+mineSpeed: 20
 mineTier: 5
+abilities: [
+  {
+    type: RepairFieldAbility
+    range: 80
+    reload: 50
+    amount: 165
+  }
+]

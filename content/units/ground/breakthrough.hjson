@@ -10,6 +10,7 @@ faceTarget: false
 rotateShooting: false
 targetAir: false
 circleTarget: true
+canBoost: true
 mineTier: 4
 mineSpeed: 13
 weapons: [

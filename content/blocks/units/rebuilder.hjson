@@ -8,7 +8,7 @@ constructTime: 2500
 requirements: [
     phase-fabric/750
     plastanium/550
-    hardenedtitanium/750
+    hardened-titanium/750
     surge-alloy/550
     thorium/450
     silicon/450
@@ -25,30 +25,30 @@ consumes: {
         items: [
             {
                 item: surge-alloy
-                amount: 850
+                amount: 1250
             },
             {
                 item: silicon
-                amount: 850
+                amount: 1350
             },
             {
                 item: plastanium
-                amount: 750
+                amount: 1050
             },
             {
                 item: phase-fabric
                 amount: 1000
             },
             {
-                item: hardenedtitanium
+                item: hardened-titanium
                 amount: 1000
             }
         ]
     }
-    power: 26
+    power: 30
     liquid: {
      liquid: cryofluid
-     amount: 1
+     amount: 2.8
     }
 }
 

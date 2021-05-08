@@ -23,7 +23,7 @@ consumes: {
   }
 }
 requirements: [
-  hardenedtitanium/70
+  hardened-titanium/70
   plastanium/120
   phase-fabric/50
   thorium/45

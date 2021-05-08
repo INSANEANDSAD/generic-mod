@@ -1,0 +1,20 @@
+health: 2400
+size: 4
+reloadTime: 70
+range: 600
+inaccuracy: 0
+rotateSpeed: 1.5
+targetAir: true
+ammoPerShot: 1
+requirements: [
+  surge-alloy/250
+  phase-fabric/500
+  hardened-titanium/405
+  silicon/550
+  plastanium/400
+]
+consumes: {
+  power: 65
+}
+category: turret
+research: meltdown

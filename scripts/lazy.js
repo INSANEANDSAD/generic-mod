@@ -7,11 +7,11 @@ module.exports = {
     }});
     Draw.color();
     Lines.stroke(1);
- },
+  },
  fillC(x, y, col, transparency, radius){
     Draw.color(col);
     Draw.alpha(transparency);
     Fill.circle(x, y, radius);
     Draw.color();
-  },
+  }
 };

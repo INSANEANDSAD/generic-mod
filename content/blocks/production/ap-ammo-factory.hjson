@@ -1,7 +1,6 @@
 type: GenericSmelter
 localizedName: AP ammunition factory
-description: Constructs armour-piercing ammunition
-details: 'murica!
+description: "Constructs armour-piercing ammunition"
 outputItem: {
   item: AP
   amount: 1
@@ -9,18 +8,17 @@ outputItem: {
 size: 2
 hasPower: true
 craftTime: 120
-updateEffect: smeltsmoke
 consumes: {
  power: 3
  items: {
     items: [
-      hardenedtitanium/4
+      hardened-titanium/4
       blast-compound/1
     ]
   }
 }
 requirements: [
-  hardenedtitanium/10
+  hardened-titanium/10
   graphite/70
   silicon/55
 ]

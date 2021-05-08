@@ -68,7 +68,7 @@ const orb = extendContent(ItemTurret, "orb", {
     init(){
 		this.ammo(
 		    Items.pyratite, orbPyra,
-	            Items.blastCompound, orbBlast,
+	        Items.blastCompound, orbBlast,
 		    Items.silicon, orbSilicon  
 		);
 		this.super$init();
