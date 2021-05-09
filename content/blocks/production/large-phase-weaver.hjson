@@ -1,6 +1,4 @@
 type: GenericSmelter
-localizedName: "Large Phase Weaver"
-description: "A larger and more powerful phase weaver"
 outputItem: {
   item: phase-fabric
   amount: 3

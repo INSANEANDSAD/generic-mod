@@ -1,6 +1,4 @@
 type: GenericSmelter
-localizedName: "Plastanium Arc Furnace"
-description: "Faster Plastanium production. Needs large amounts of cryofluid as coolant"
 outputItem: {
   item: plastanium
   amount: 6

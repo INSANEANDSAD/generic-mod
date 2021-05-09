@@ -1,6 +1,4 @@
 type: GenericSmelter
-localizedName: HE ammunition factory
-description: "Constructs explosive ammunition"
 outputItem: HE/1
 size: 2
 hasPower: true

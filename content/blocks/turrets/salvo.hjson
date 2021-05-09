@@ -46,4 +46,22 @@ ammoTypes: {
   lifetime: 60
   ammoMultiplier: 5
  }
+  titanium: {
+  damage: 26
+  reloadMultiplier: 1.1
+  width: 10
+  length: 13
+  speed: 3.5
+  lifetime: 60
+  ammoMultiplier: 3
+ }
+ hardened-titanium: {
+  damage: 47
+  reloadMultiplier: 0.95
+  width: 10
+  length: 13
+  speed: 3.5
+  lifetime: 60
+  ammoMultiplier: 5
+ }
 }
