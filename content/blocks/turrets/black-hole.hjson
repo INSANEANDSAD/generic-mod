@@ -9,12 +9,12 @@ ammoPerShot: 1
 requirements: [
   surge-alloy/250
   phase-fabric/500
-  hardened-titanium/405
+  hardened-titanium/4590
   silicon/550
   plastanium/400
 ]
 consumes: {
-  power: 65
+  power: 80
 }
 category: turret
 research: meltdown

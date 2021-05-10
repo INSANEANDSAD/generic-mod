@@ -5,7 +5,7 @@ reloadTime: 9
 range: 184
 xRand: 1
 inaccuracy: 3
-shots: 4
+shots: 5
 targetAir: true
 rotateSpeed: 5
 shootCone: 15

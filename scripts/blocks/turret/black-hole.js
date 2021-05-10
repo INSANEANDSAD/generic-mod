@@ -48,7 +48,7 @@ const bhS=extend(BasicBulletType,{
   update(b){
         Units.nearbyEnemies(b.team, b.x - 280, b.y - 280, 280 * 2, 280 * 2, cons(unit => {
             if(unit.within(b.x, b.y, 280)){
-                unit.impulse(Tmp.v1.set(b).sub(unit).limit((280 + Interp.pow3In.apply(1 - (unit.dst(b) - 280) / 280) * 10)));
+                unit.impulse(Tmp.v1.set(b).sub(unit).limit((280 + Interp.pow3In.apply(1 - (unit.dst(b) - 280) / 280) * 13)));
             };
         }));
         if(b.timer.get(0,5)){ 
@@ -61,7 +61,7 @@ const bhS=extend(BasicBulletType,{
         Damage.tileDamage(b.team,World.toTile(b.x),World.toTile(b.y),224,50);
          Units.nearbyEnemies(b.team, b.x - 64, b.y - 64, 64 * 2, 64 * 2, cons(unit => {
                 if(unit.within(b.x, b.y, 64)){
-                    unit.health -= unit.health * 0.005; 
+                    unit.health -= unit.health * 0.002; 
                 };
          })); 
     }

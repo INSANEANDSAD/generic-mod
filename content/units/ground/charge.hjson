@@ -35,7 +35,6 @@ weapons: [
     y: 0
     shootCone: 360
     rotateSpeed: 16
-    top: false
     bullet: {
      type: BasicBulletType
      width: 12
@@ -70,7 +69,7 @@ weapons: [
     y: 0
     shootCone: 30
     rotateSpeed: 3
-    top: true
+    recoil: 0.5
     bullet: {
      type: FlakBulletType
      width: 5
