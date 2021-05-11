@@ -35,7 +35,7 @@ const volcanoPyra=extend(ArtilleryBulletType,{
       this.super$hit(b,b.x,b.y);
       Units.nearbyEnemies(b.team, b.x - 64, b.y - 64, 64 * 2, 64 * 2, cons(unit => {
             if(unit.within(b.x, b.y, 64)){
-                unit.health -= unit.health * 0.001; 
+                unit.health -= unit.health * 0.0015; 
             };
       })); 
 	}
@@ -61,7 +61,7 @@ const volcanoExplosive=extend(ArtilleryBulletType,{
       this.super$hit(b,b.x,b.y);
       Units.nearbyEnemies(b.team, b.x - 84, b.y - 84, 84 * 2, 84 * 2, cons(unit => {
             if(unit.within(b.x, b.y, 84)){
-                unit.health -= unit.health * 0.0025; 
+                unit.health -= unit.health * 0.0035; 
             };
       })); 
 	}
@@ -87,24 +87,27 @@ volcanoExplosive.hittable=false;
 const volcanoSAP=extend(ArtilleryBulletType,{
 	hit(b){
       this.super$hit(b,b.x,b.y);
-      Units.nearbyEnemies(b.team, b.x - 84, b.y - 84, 84 * 2, 84 * 2, cons(unit => {
-            if(unit.within(b.x, b.y, 84)){
-                unit.health -= unit.health * 0.006; 
+      Units.nearbyEnemies(b.team, b.x - 90, b.y - 90, 90 * 2, 90 * 2, cons(unit => {
+            if(unit.within(b.x, b.y, 90)){
+                unit.health -= unit.health * 0.007; 
             };
       })); 
 	}
 });
 volcanoSAP.lifetime=190;
 volcanoSAP.speed=3.3;
-volcanoSAP.splashDamage=200;
+volcanoSAP.splashDamage=180;
 volcanoSAP.reloadMultiplier=1.4;
-volcanoSAP.splashDamageRadius=84;
+volcanoSAP.splashDamageRadius=80;
 volcanoSAP.hitEffect=shellHit;
 volcanoSAP.shootEffect=volcanoShoot;
 volcanoSAP.width=20;
 volcanoSAP.height=20;
 volcanoSAP.homingPower=0.03;
 volcanoSAP.homingRange=96;
+volcanoSAP.lightning=3;
+volcanoSAP.lightningDamage=24;
+volcanoSAP.lightningLength=12;
 volcanoSAP.height=20;
 volcanoSAP.backColor=Color.valueOf("ff7588");
 volcanoSAP.frontColor=Color.valueOf("ff9999");

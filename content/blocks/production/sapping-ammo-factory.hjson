@@ -15,7 +15,7 @@ consumes: {
 requirements: [
   hardened-titanium/70
   phase-alloy/70
-  plastanum/65
+  plastanium/65
 ]
 category: crafting
 research: ap-ammo-factory
