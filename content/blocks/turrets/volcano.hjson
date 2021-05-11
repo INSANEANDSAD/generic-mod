@@ -4,7 +4,8 @@ reloadTime: 90
 shots: 8
 coolantMultiplier: 8.5
 range: 580
-inaccuracy: 1
+inaccuracy: 0.5
+velocityInaccuracy: 0.1
 rotateSpeed: 1
 recoil: 14
 targetAir: false
