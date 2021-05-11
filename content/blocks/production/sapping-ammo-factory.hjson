@@ -1,0 +1,22 @@
+type: GenericSmelter
+outputItem: SAP/1
+size: 2
+hasPower: true
+craftTime: 90
+consumes: {
+ power: 5
+ items: {
+    items: [
+      phase-alloy/2
+      hardened-titanium/3
+    ]
+  }
+}
+requirements: [
+  hardened-titanium/70
+  phase-alloy/70
+  plastanum/65
+]
+category: crafting
+research: ap-ammo-factory
+

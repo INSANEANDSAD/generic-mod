@@ -3,6 +3,7 @@ const volcano = extendContent(ItemTurret, "volcano", {
     init(){
 		this.ammo(
 		    Items.pyratite, volcanoPyra,
+		    Vars.content.getByName(ContentType.item, "name-SAP"), volcanoSAP,
 		    Vars.content.getByName(ContentType.item, "name-HE"), volcanoExplosive
 		);
 		this.super$init();
@@ -34,7 +35,7 @@ const volcanoPyra=extend(ArtilleryBulletType,{
       this.super$hit(b,b.x,b.y);
       Units.nearbyEnemies(b.team, b.x - 64, b.y - 64, 64 * 2, 64 * 2, cons(unit => {
             if(unit.within(b.x, b.y, 64)){
-                unit.health -= unit.health * 0.003; 
+                unit.health -= unit.health * 0.001; 
             };
       })); 
 	}
@@ -51,6 +52,8 @@ volcanoPyra.backColor=Color.valueOf("ffaa68");
 volcanoPyra.frontColor=Color.valueOf("ff9987");
 volcanoPyra.status=StatusEffects.burning;
 volcanoPyra.hittable=false;
+volcanoPyra.homingPower=0.03;
+volcanoPyra.homingRange=80;
 
 
 const volcanoExplosive=extend(ArtilleryBulletType,{
@@ -58,7 +61,7 @@ const volcanoExplosive=extend(ArtilleryBulletType,{
       this.super$hit(b,b.x,b.y);
       Units.nearbyEnemies(b.team, b.x - 84, b.y - 84, 84 * 2, 84 * 2, cons(unit => {
             if(unit.within(b.x, b.y, 84)){
-                unit.health -= unit.health * 0.005; 
+                unit.health -= unit.health * 0.0025; 
             };
       })); 
 	}
@@ -72,7 +75,38 @@ volcanoExplosive.hitEffect=shellHit;
 volcanoExplosive.shootEffect=volcanoShoot;
 volcanoExplosive.width=20;
 volcanoExplosive.height=20;
+volcanoExplosive.homingPower=0.03;
+volcanoExplosive.homingRange=80;
+volcanoExplosive.height=20;
 volcanoExplosive.backColor=Color.valueOf("ff7568");
 volcanoExplosive.frontColor=Color.valueOf("ff7987");
 volcanoExplosive.status=StatusEffects.blasted;
 volcanoExplosive.hittable=false;
+
+
+const volcanoSAP=extend(ArtilleryBulletType,{
+	hit(b){
+      this.super$hit(b,b.x,b.y);
+      Units.nearbyEnemies(b.team, b.x - 84, b.y - 84, 84 * 2, 84 * 2, cons(unit => {
+            if(unit.within(b.x, b.y, 84)){
+                unit.health -= unit.health * 0.006; 
+            };
+      })); 
+	}
+});
+volcanoSAP.lifetime=190;
+volcanoSAP.speed=3.3;
+volcanoSAP.splashDamage=200;
+volcanoSAP.reloadMultiplier=1.4;
+volcanoSAP.splashDamageRadius=84;
+volcanoSAP.hitEffect=shellHit;
+volcanoSAP.shootEffect=volcanoShoot;
+volcanoSAP.width=20;
+volcanoSAP.height=20;
+volcanoSAP.homingPower=0.03;
+volcanoSAP.homingRange=96;
+volcanoSAP.height=20;
+volcanoSAP.backColor=Color.valueOf("ff7588");
+volcanoSAP.frontColor=Color.valueOf("ff9999");
+volcanoSAP.status=StatusEffects.sapped;
+volcanoSAP.hittable=false;

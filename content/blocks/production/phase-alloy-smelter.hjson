@@ -1,0 +1,33 @@
+type: GenericSmelter
+outputItem: {
+  item: phase-alloy
+  amount: 1
+}
+size: 4
+hasPower: true
+craftTime: 60
+updateEffect: smeltsmoke
+consumes: {
+ power: 8
+ liquid: {
+    liquid: cryofluid
+    amount: 0.2
+ }
+ items: {
+    items: [
+      surge-alloy/3
+      hardened-titanium/2
+      phase-fabric/3
+      plastanium/1
+    ]
+  }
+}
+requirements: [
+  hardened-titanium/180
+  plastanium/220
+  phase-fabric/150
+  surge-allou/200
+]
+category: crafting
+research: phase-weaver
+idleSoundVolume: 0.5
