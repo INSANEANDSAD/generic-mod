@@ -2,7 +2,7 @@
 const lazy = require("name/lazy");
 
 
-const blackhole = extendContent(ItemTurret, "black-hole", {
+const blackHole = extendContent(ItemTurret, "black-hole", {
     init(){
 		this.super$init();
 		this.ammo(
@@ -17,11 +17,16 @@ const bhT=extend(BasicBulletType,{
         Units.nearbyEnemies(b.team, b.x - 132, b.y - 132, 132 * 2, 132 * 2, cons(unit => {
             if(unit.within(b.x, b.y, 132)){
                 unit.impulse(Tmp.v1.set(b).sub(unit).limit((132 + Interp.pow3In.apply(1 - (unit.dst(b) - 132) / 132) * 2.5)));
-                if(b.timer.get(1, 6)){
-                Damage.damage(b.team,b.x,b.y,132,50*(Math.max(1 - ((unit.dst(b) -  132)/132), 0.2)));
-                }
+               
             };
         }));
+        if(b.timer.get(1, 5)){
+        Units.nearbyEnemies(b.team, b.x - 132, b.y - 132, 132 * 2, 132 * 2, cons(unit => {
+            if(unit.within(b.x, b.y, 132)){
+                Damage.damage(b.team,b.x,b.y,132,50*(Math.max(1 - ((unit.dst(b) -  132)/132), 0.2)));
+            };
+        }));
+        }      
     }
 });
 

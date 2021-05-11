@@ -1,16 +1,16 @@
 health: 1000
 itemCapacity: 20
 size: 3
-reloadTime: 9
+reloadTime: 8
 range: 184
 xRand: 1
 inaccuracy: 3
-shots: 5
+shots: 4
 targetAir: true
 rotateSpeed: 5
 shootCone: 15
 recoilAmount: 0.5
-coolantMultiplier: 6
+coolantMultiplier: 7
 requirements: [
   blast-compound/80
   hardened-titanium/120

@@ -1,6 +1,4 @@
 type: resource
 color: a66600
-localizedName: HE ammunition
-description: Generic explosive ammunition.
 explosiveness: 2
 flammability: 0.25
