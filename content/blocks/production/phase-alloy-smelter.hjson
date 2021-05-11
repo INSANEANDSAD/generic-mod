@@ -3,7 +3,7 @@ outputItem: {
   item: phase-alloy
   amount: 1
 }
-size: 4
+size: 3
 hasPower: true
 craftTime: 60
 updateEffect: smeltsmoke
