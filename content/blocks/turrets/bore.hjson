@@ -9,7 +9,7 @@ ammoPerShot: 2
 coolantMultiplier: 6
 requirements: [
   hardened-titanium/160
-  lead/100
+  plastanium/100
   graphite/135
   silicon/120
   copper/110
