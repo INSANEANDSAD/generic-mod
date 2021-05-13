@@ -30,7 +30,7 @@ const boreAP=extend(BasicBulletType,{
       this.super$hit(b,b.x,b.y);
       Units.nearbyEnemies(b.team, b.x - 15, b.y - 13, 13 * 2, 15 * 2, cons(unit => {
             if(unit.within(b.x, b.y, 15)){
-                unit.health -= (unit.maxHealth * 2 / unit.hitSize);
+                unit.health -= (unit.maxHealth * 1.8 / unit.hitSize);
             };
       })); 
     }, 
@@ -38,7 +38,7 @@ const boreAP=extend(BasicBulletType,{
     speed: 12,
     frontColor: Pal.sapBullet,
     backColor: Pal.sapBulletBack,
-    damage: 750,
+    damage: 725,
     width: 9,
     height: 13,
     hitEffect: Fx.blastExplosion,
@@ -74,7 +74,7 @@ const boreSAP=extend(BasicBulletType,{
     speed: 12,
     frontColor: Pal.sapBullet,
     backColor: Pal.sapBulletBack,
-    damage: 700,
+    damage: 650,
     width: 9,
     height: 13,
     reloadMultiplier: 1.1,
@@ -144,7 +144,7 @@ const borePlastic=extend(BasicBulletType,{
     }, 
     lifetime: 49,
     speed: 10.5,
-    damage: 575,
+    damage: 500,
     fragBullet: Bullets.fragPlasticFrag,
     fragBullets: 20,
     width: 9,

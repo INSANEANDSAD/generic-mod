@@ -1,7 +1,7 @@
 health: 1600
 size: 3
 reloadTime: 120
-range: 480
+range: 424
 inaccuracy: 0
 rotateSpeed: 1.5
 targetAir: true
@@ -14,7 +14,7 @@ requirements: [
   silicon/120
 ]
 consumes: {
-  power: 10
+  power: 12
 }
 category: turret
 research: ripple
