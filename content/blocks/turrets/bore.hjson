@@ -1,6 +1,6 @@
 health: 1600
 size: 3
-reloadTime: 120
+reloadTime: 170
 range: 424
 inaccuracy: 0
 rotateSpeed: 1.5
@@ -8,10 +8,11 @@ targetAir: true
 ammoPerShot: 2
 coolantMultiplier: 6
 requirements: [
-  hardened-titanium/130
-  copper/100
-  plastanium/135
+  hardened-titanium/160
+  lead/100
+  graphite/135
   silicon/120
+  copper/110
 ]
 consumes: {
   power: 12

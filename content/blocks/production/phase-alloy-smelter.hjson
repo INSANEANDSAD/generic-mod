@@ -15,9 +15,9 @@ consumes: {
  }
  items: {
     items: [
-      surge-alloy/3
+      surge-alloy/2
       hardened-titanium/2
-      phase-fabric/3
+      phase-fabric/2
       plastanium/1
     ]
   }
