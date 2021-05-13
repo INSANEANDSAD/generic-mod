@@ -33,17 +33,18 @@ const shellHit = new Effect(27, e => {
 const volcanoPyra=extend(ArtilleryBulletType,{
 	hit(b){
       this.super$hit(b,b.x,b.y);
+      /*
       Units.nearbyEnemies(b.team, b.x - 64, b.y - 64, 64 * 2, 64 * 2, cons(unit => {
             if(unit.within(b.x, b.y, 64)){
                 unit.health -= unit.health * 0.0015; 
             };
-      })); 
+      })); */
 	}
 });
 volcanoPyra.lifetime=185;
 volcanoPyra.speed=3.2;
 volcanoPyra.splashDamage=140;
-volcanoPyra.splashDamageRadius=64;
+volcanoPyra.splashDamageRadius=72;
 volcanoPyra.hitEffect=Fx.massiveExplosion;
 volcanoPyra.shootEffect=volcanoShoot;
 volcanoPyra.width=18;
@@ -59,18 +60,18 @@ volcanoPyra.homingRange=80;
 const volcanoExplosive=extend(ArtilleryBulletType,{
 	hit(b){
       this.super$hit(b,b.x,b.y);
-      Units.nearbyEnemies(b.team, b.x - 84, b.y - 84, 84 * 2, 84 * 2, cons(unit => {
+    /*  Units.nearbyEnemies(b.team, b.x - 84, b.y - 84, 84 * 2, 84 * 2, cons(unit => {
             if(unit.within(b.x, b.y, 84)){
                 unit.health -= unit.health * 0.0035; 
             };
-      })); 
+      })); */
 	}
 });
 volcanoExplosive.lifetime=210;
 volcanoExplosive.speed=2.9;
-volcanoExplosive.splashDamage=260;
+volcanoExplosive.splashDamage=290;
 volcanoExplosive.reloadMultiplier=1.15;
-volcanoExplosive.splashDamageRadius=84;
+volcanoExplosive.splashDamageRadius=92;
 volcanoExplosive.hitEffect=shellHit;
 volcanoExplosive.shootEffect=volcanoShoot;
 volcanoExplosive.width=20;
@@ -89,14 +90,14 @@ const volcanoSAP=extend(ArtilleryBulletType,{
       this.super$hit(b,b.x,b.y);
       Units.nearbyEnemies(b.team, b.x - 90, b.y - 90, 90 * 2, 90 * 2, cons(unit => {
             if(unit.within(b.x, b.y, 90)){
-                unit.health -= unit.health * 0.007; 
+                unit.health -= unit.maxHealth * 0.0065; 
             };
       })); 
 	}
 });
 volcanoSAP.lifetime=190;
 volcanoSAP.speed=3.3;
-volcanoSAP.splashDamage=180;
+volcanoSAP.splashDamage=210;
 volcanoSAP.reloadMultiplier=1.4;
 volcanoSAP.splashDamageRadius=80;
 volcanoSAP.hitEffect=shellHit;
