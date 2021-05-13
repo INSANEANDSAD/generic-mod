@@ -34,16 +34,14 @@ const boreAP=extend(BasicBulletType,{
             };
       })); 
     }, 
-    lifetime: 44,
-    speed: 12,
+    lifetime: 37,
+    speed: 15.5,
     frontColor: Pal.sapBullet,
     backColor: Pal.sapBulletBack,
     damage: 765,
     width: 9,
     height: 13,
     hitEffect: Fx.blastExplosion,
-    homingRange: 120,
-    homingPower: 0.04,
     pierce: true,
     pierceBuilding: true,
     pierceCap: 4
@@ -71,8 +69,8 @@ const boreSAP=extend(BasicBulletType,{
             };
       })); 
     }, 
-    lifetime: 44,
-    speed: 12,
+    lifetime: 37,
+    speed: 15.5,
     frontColor: Pal.sapBullet,
     backColor: Pal.sapBulletBack,
     damage: 740,
@@ -82,8 +80,6 @@ const boreSAP=extend(BasicBulletType,{
     ammoMultiplier: 2,
     hitEffect: Fx.blastExplosion,
     despawnEffect: Fx.blastExplosion,
-    homingRange: 120,
-    homingPower: 0.04,
     pierce: true,
     pierceBuilding: true,
     pierceCap: 4
@@ -147,8 +143,8 @@ const borePlastic=extend(BasicBulletType,{
             };
       })); 
     }, 
-    lifetime: 49,
-    speed: 10.5,
+    lifetime: 42,
+    speed: 13,
     damage: 500,
     fragBullet: Bullets.fragPlasticFrag,
     fragBullets: 24,
@@ -157,8 +153,6 @@ const borePlastic=extend(BasicBulletType,{
     height: 13,
     pierce: true,
     pierceCap: 3,
-    homingRange: 120,
-    homingPower: 0.04,
     pierceBuilding: true,
     hitEffect: Fx.plasticExplosion,
     despawnEffect: Fx.plasticExplosion
