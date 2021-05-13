@@ -4,6 +4,7 @@ require("blocks/turret/storm");
 require("blocks/turret/black-hole");
 require("blocks/turret/flamethrower");
 require("blocks/turret/krakatoa");
+require("blocks/turret/bore");
 require("units/catapult");
 require("units/trebuchet");
 require("units/volt");

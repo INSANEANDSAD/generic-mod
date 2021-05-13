@@ -1,0 +1,20 @@
+health: 1600
+size: 3
+reloadTime: 120
+range: 480
+inaccuracy: 0
+rotateSpeed: 1.5
+targetAir: true
+ammoPerShot: 2
+coolantMultiplier: 6
+requirements: [
+  hardened-titanium/130
+  copper/100
+  plastanium/135
+  silicon/120
+]
+consumes: {
+  power: 10
+}
+category: turret
+research: ripple
