@@ -53,7 +53,7 @@ const bhS=extend(BasicBulletType,{
   update(b){
         Units.nearbyEnemies(b.team, b.x - 280, b.y - 280, 280 * 2, 280 * 2, cons(unit => {
             if(unit.within(b.x, b.y, 280)){
-                unit.impulse(Tmp.v1.set(b).sub(unit).limit((280 + Interp.pow3In.apply(1 - (unit.dst(b) - 280) / 280) * 2 * unit.hitSize)));
+                unit.impulse(Tmp.v1.set(b).sub(unit).limit((280 + Interp.pow3In.apply(1 - (unit.dst(b) - 280) / 280) * 0.7 * unit.hitSize * (unit.hitSize * 0.35)));
             };
         }));
         if(b.timer.get(0,5)){ 
