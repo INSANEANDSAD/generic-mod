@@ -188,7 +188,7 @@ const downpourSAP=extend(MissileBulletType,{
       this.super$hit(b,b.x,b.y);
       Units.nearbyEnemies(b.team, b.x - 60, b.y - 60, 60 * 2, 60 * 2, cons(unit => {
             if(unit.within(b.x, b.y, 60)){
-                unit.health -= (unit.maxHealth * 0.50 / unit.hitSize);
+                unit.health -= (unit.maxHealth * 0.02);
             };
       })); 
     }, 

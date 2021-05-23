@@ -53,7 +53,7 @@ const bhS=extend(BasicBulletType,{
   update(b){
         Units.nearbyEnemies(b.team, b.x - 280, b.y - 280, 280 * 2, 280 * 2, cons(unit => {
             if(unit.within(b.x, b.y, 280)){
-                unit.impulse(Tmp.v1.set(b).sub(unit).limit((280 + Interp.pow3In.apply(1 - (unit.dst(b) - 280) / 280) * 1.4 * unit.hitSize * (unit.hitSize * 0.35))));
+                unit.impulse(Tmp.v1.set(b).sub(unit).limit((280 + Interp.pow3In.apply(1 - (unit.dst(b) - 280) / 280) * 0.5 * unit.hitSize * unit.hitSize)));
             };
         }));
         if(b.timer.get(0,5)){ 
@@ -64,9 +64,9 @@ const bhS=extend(BasicBulletType,{
                 };
          })); 
         Damage.tileDamage(b.team,World.toTile(b.x),World.toTile(b.y),224,50);
-         Units.nearbyEnemies(b.team, b.x - 64, b.y - 64, 64 * 2, 64 * 2, cons(unit => {
+            Units.nearbyEnemies(b.team, b.x - 64, b.y - 64, 64 * 2, 64 * 2, cons(unit => {
                 if(unit.within(b.x, b.y, 64)){
-                    unit.health -= (unit.maxHealth * 0.40 / unit.hitSize);
+                    unit.health -= (unit.maxHealth * 0.02);
                 };
          })); 
     }
@@ -92,7 +92,7 @@ bhS.damageInterval=5;
 bhS.damage=120;
 bhS.splashDamage=40;
 bhS.splashDamageRadius=40;
-bhS.trailEffect=Fx.massiveExplosion;
+bhS.shootEffect=Fx.launchPod;
 bhS.pierce=true;
 bhS.speed=2;
 bhS.frontColor=Color.valueOf("222222");

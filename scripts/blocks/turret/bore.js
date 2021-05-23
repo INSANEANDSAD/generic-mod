@@ -30,7 +30,7 @@ const boreAP=extend(BasicBulletType,{
       this.super$hit(b,b.x,b.y);
       Units.nearbyEnemies(b.team, b.x - 15, b.y - 13, 13 * 2, 15 * 2, cons(unit => {
             if(unit.within(b.x, b.y, 15)){
-                unit.health -= (unit.maxHealth * 1.8 / unit.hitSize);
+                unit.health -= (unit.maxHealth * 0.045);
             };
       })); 
     }, 
@@ -65,7 +65,7 @@ const boreSAP=extend(BasicBulletType,{
       this.super$hit(b,b.x,b.y);
       Units.nearbyEnemies(b.team, b.x - 15, b.y - 15, 15 * 2, 15 * 2, cons(unit => {
             if(unit.within(b.x, b.y, 15)){
-                unit.health -= (unit.maxHealth * 5.5 / unit.hitSize);
+                unit.health -= (unit.maxHealth * 0.07);
             };
       })); 
     }, 
@@ -103,7 +103,7 @@ const boreDense=extend(BasicBulletType,{
       this.super$hit(b,b.x,b.y);
       Units.nearbyEnemies(b.team, b.x - 15, b.y - 15, 15 * 2, 15 * 2, cons(unit => {
             if(unit.within(b.x, b.y, 15)){
-                unit.health -= (unit.maxHealth * 0.8 / unit.hitSize);
+                unit.health -= (unit.maxHealth * 0.025);
             };
       })); 
     }, 
@@ -139,7 +139,7 @@ const borePlastic=extend(BasicBulletType,{
       this.super$hit(b,b.x,b.y);
       Units.nearbyEnemies(b.team, b.x - 15, b.y - 15, 15 * 2, 15 * 2, cons(unit => {
             if(unit.within(b.x, b.y, 15)){
-                unit.health -= (unit.maxHealth * 1.1 / unit.hitSize);
+                unit.health -= (unit.maxHealth * 0.4);
             };
       })); 
     }, 
